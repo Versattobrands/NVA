@@ -1,0 +1,68 @@
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { Header } from "./components/layout/Header";
+import { Footer } from "./components/layout/Footer";
+import { FloatingWhatsAppButton } from "./components/ui/FloatingWhatsAppButton";
+
+// Pages
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Products } from "./pages/Products";
+import { Contact } from "./pages/Contact";
+import { Troppoil } from "./pages/Troppoil";
+
+// Utility component to scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
+// Utility component to update document title
+const DocumentTitle = () => {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    const titles: Record<string, string> = {
+      "/": "Novaag | Inovação e honra no campo",
+      "/quem-somos": "Quem Somos | Novaag",
+      "/produtos": "Produtos e soluções agrícolas | Novaag",
+      "/contato": "Entre em contato | Novaag",
+      "/troppoil": "Troppoil | Solução para aplicações agrícolas | Novaag"
+    };
+    
+    document.title = titles[pathname] || "Novaag";
+  }, [pathname]);
+  
+  return null;
+};
+
+function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <DocumentTitle />
+      
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/quem-somos" element={<About />} />
+            <Route path="/produtos" element={<Products />} />
+            <Route path="/contato" element={<Contact />} />
+            <Route path="/troppoil" element={<Troppoil />} />
+          </Routes>
+        </main>
+        
+        <Footer />
+        <FloatingWhatsAppButton />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
