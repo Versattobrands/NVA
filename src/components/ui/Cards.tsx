@@ -8,13 +8,16 @@ export const FeatureCard = ({
   title,
   description,
   className,
+  style
 }: {
   icon: React.ReactNode;
   title: string;
   description: string;
   className?: string;
+  style?: React.CSSProperties;
 }) => (
   <div
+    style={style}
     className={cn(
       "bg-white p-8 rounded-xl shadow-sm border border-novaag-black/10 hover:shadow-md transition-all duration-300 group hover:-translate-y-1",
       className

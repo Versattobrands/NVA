@@ -1,8 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { SectionHeading } from "../components/ui/SectionHeading";
-import { FeatureCard } from "../components/ui/Cards";
+import { } from "../components/ui/Cards";
 import { ImagePlaceholder } from "../components/ui/ImagePlaceholder";
 import { Map, Target, Eye, Heart, Zap, Settings, Combine, Sprout, ShieldCheck } from "lucide-react";
 

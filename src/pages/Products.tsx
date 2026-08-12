@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { ProductCard } from "../components/ui/Cards";
-import { Search, ChevronDown } from "lucide-react";
+import { Search, } from "lucide-react";
 import { cn } from "../lib/utils";
 import { PORTFOLIO } from "../data/products";
 

@@ -1,8 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { SectionHeading } from "../components/ui/SectionHeading";
-import { FeatureCard, ProductCard, StatCard } from "../components/ui/Cards";
+import { FeatureCard, ProductCard, } from "../components/ui/Cards";
 import {
   Settings,
   Zap,
@@ -11,8 +10,7 @@ import {
   Droplet,
   Sprout,
   Combine,
-  ChevronRight,
-} from "lucide-react";
+  } from "lucide-react";
 
 export const Home = () => {
   return (
