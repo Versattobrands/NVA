@@ -55,6 +55,20 @@ export const ProductRow: React.FC<ProductRowProps> = ({ product, index }) => {
               {product.description}
             </p>
             
+            {product.infoBlocks && product.infoBlocks.length > 0 && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+                {product.infoBlocks.map((block, idx) => (
+                  <div key={idx} className="bg-[#151716] border border-white/5 p-5 md:p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-xl">
+                    <span className="text-white text-sm md:text-base font-bold mb-2">{block.title}</span>
+                    <span className="text-white text-xl md:text-2xl font-bold italic leading-tight mb-2">{block.highlight}</span>
+                    {block.description && (
+                      <span className="text-white/90 text-sm md:text-base font-bold leading-snug">{block.description}</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+            
             {product.features && product.features.length > 0 && (
               <div className="flex flex-wrap gap-4 mb-10 pt-2">
                 {product.features.map((feature, idx) => (

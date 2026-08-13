@@ -5,11 +5,18 @@ export type ProductFeature = {
   icon?: string;
 };
 
+export type InfoBlock = {
+  title: string;
+  highlight: string;
+  description?: string;
+};
+
 export type Product = {
   slug: string;
   name: string;
   area: "Agro";
   description: string;
+  infoBlocks?: InfoBlock[];
   features: ProductFeature[];
   image?: string;
   technicalSheet?: string;
@@ -53,6 +60,22 @@ export const AGRO_PRODUCTS: Product[] = [
     area: "Agro",
     description: "Produto associado à estimulação e à evolução do desenvolvimento vegetal.",
     image: ASSETS.products.generic,
+    infoBlocks: [
+      {
+        title: "Nutrientes Elaborados:",
+        highlight: "L-aminoácidos",
+        description: "Carboidratos de origem vegetal."
+      },
+      {
+        title: "Nutrientes Minerais:",
+        highlight: "Todos os 17 Macros/Micros",
+        description: "Nutrientes inclusos Selênio."
+      },
+      {
+        title: "Componentes:",
+        highlight: "Elicitores de PGRs com Algas"
+      }
+    ],
     features: [
       { name: "Estimula evolução", icon: ASSETS.icons.estimulaEvolucao },
       { name: "Bio-sinergia", icon: ASSETS.icons.bioSinergia },
