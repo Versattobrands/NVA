@@ -56,7 +56,7 @@ export const ProductRow: React.FC<ProductRowProps> = ({ product, index }) => {
             </p>
             
             {product.features && product.features.length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              <div className="flex flex-wrap gap-4 mb-10 pt-2">
                 {product.features.map((feature, idx) => (
                   <ProductFeature key={idx} feature={feature} />
                 ))}

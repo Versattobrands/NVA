@@ -7,15 +7,26 @@ interface ProductFeatureProps {
 
 export const ProductFeature: React.FC<ProductFeatureProps> = ({ feature }) => {
   return (
-    <div className="flex items-center gap-3 bg-white/5 p-3 rounded-lg border border-white/10 hover:border-novaag-gold/50 transition-colors">
-      {feature.icon ? (
-        <div className="w-10 h-10 shrink-0 bg-white/10 rounded-full flex items-center justify-center p-2">
-          <img src={feature.icon} alt="" className="w-full h-full object-contain filter brightness-0 invert" />
-        </div>
-      ) : (
-        <div className="w-2 h-2 rounded-full bg-novaag-gold shrink-0 mx-4" />
-      )}
-      <span className="text-white text-base font-medium">{feature.name}</span>
+    <div className="flex items-end mb-4 mr-2 md:mr-6">
+      {/* Icon Circle */}
+      <div className="relative w-16 h-16 rounded-full bg-white flex items-center justify-center p-3 z-10 shrink-0">
+        {feature.icon ? (
+          <img 
+            src={feature.icon} 
+            alt={feature.name} 
+            className="w-full h-full object-contain" 
+          />
+        ) : (
+          <div className="w-4 h-4 rounded-full bg-novaag-green" />
+        )}
+      </div>
+      
+      {/* Line and Text */}
+      <div className="border-b-[3px] border-white -ml-8 pl-10 pr-2 pb-1 flex items-end">
+        <span className="text-white font-bold uppercase text-[11px] md:text-xs tracking-widest leading-tight max-w-[130px]">
+          {feature.name}
+        </span>
+      </div>
     </div>
   );
 };
