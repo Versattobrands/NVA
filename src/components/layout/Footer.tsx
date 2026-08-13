@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { AtSign, ExternalLink, Share2, MapPin, Phone, Mail } from "lucide-react";
+import { ASSETS } from "../../data/assetsMap";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
     <footer className="bg-novaag-black text-white pt-16 pb-8 border-t-4 border-novaag-red">
       <div className="container mx-auto px-4 md:px-6">
@@ -10,13 +11,13 @@ export const Footer = () => {
           <div className="flex flex-col gap-6">
             <Link to="/" className="inline-block group">
               <img
-                src="/logo-negativo.svg"
+                src={ASSETS.logos.negativo}
                 alt="Novaag"
                 className="h-16 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
               />
             </Link>
-            <p className="text-novaag-gold font-semibold text-base">
-              "Inovação e honra no campo."
+            <p className="text-novaag-gold font-bold font-title text-base uppercase tracking-widest">
+              Inovação e honra no campo.
             </p>
             <p className="text-white/50 text-sm">
               Soluções biotecnológicas e químicas para o agronegócio.
@@ -25,20 +26,20 @@ export const Footer = () => {
 
           {/* Links Col */}
           <div>
-            <h4 className="text-novaag-gold font-bold mb-6 text-lg uppercase tracking-wider">
+            <h4 className="text-novaag-gold font-bold mb-6 text-lg uppercase tracking-wider font-title">
               Institucional
             </h4>
             <ul className="flex flex-col gap-4">
               {[
                 { label: "Início", to: "/" },
                 { label: "Quem somos", to: "/quem-somos" },
-                { label: "Produtos", to: "/produtos" },
+                { label: "Áreas de atuação", to: "/areas-de-atuacao" },
                 { label: "Contato", to: "/contato" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className="text-white/60 hover:text-novaag-gold transition-colors font-medium"
+                    className="text-white/60 hover:text-novaag-gold transition-colors font-bold tracking-wide"
                   >
                     {l.label}
                   </Link>
@@ -49,31 +50,31 @@ export const Footer = () => {
 
           {/* Contact Col */}
           <div>
-            <h4 className="text-novaag-gold font-bold mb-6 text-lg uppercase tracking-wider">
+            <h4 className="text-novaag-gold font-bold mb-6 text-lg uppercase tracking-wider font-title">
               Contato
             </h4>
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-novaag-red shrink-0 mt-0.5" />
-                <span className="text-white/60 text-sm">
+                <span className="text-white/60 text-sm font-bold">
                   [Endereço Placeholder]<br />
                   Cidade - UF, 00000-000
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-novaag-red shrink-0" />
-                <span className="text-white/60 text-sm">(00) 0000-0000</span>
+                <span className="text-white/60 text-sm font-bold">(00) 0000-0000</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-novaag-red shrink-0" />
-                <span className="text-white/60 text-sm">contato@novaag.com.br</span>
+                <span className="text-white/60 text-sm font-bold">contato@novaag.com.br</span>
               </li>
             </ul>
           </div>
 
           {/* Socials Col */}
           <div>
-            <h4 className="text-novaag-gold font-bold mb-6 text-lg uppercase tracking-wider">
+            <h4 className="text-novaag-gold font-bold mb-6 text-lg uppercase tracking-wider font-title">
               Redes Sociais
             </h4>
             <div className="flex items-center gap-4">
@@ -97,10 +98,10 @@ export const Footer = () => {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-sm text-center md:text-left">
+          <p className="text-white/30 text-sm text-center md:text-left font-bold">
             © {new Date().getFullYear()} NOVAAG. Todos os direitos reservados.
           </p>
-          <div className="text-white/30 text-sm flex gap-6">
+          <div className="text-white/30 text-sm flex gap-6 font-bold">
             <a href="#" className="hover:text-novaag-gold transition-colors">Termos de Uso</a>
             <a href="#" className="hover:text-novaag-gold transition-colors">Privacidade</a>
           </div>

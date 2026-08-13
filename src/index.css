@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 /* ---- FONTES DA MARCA ---- */
+:root {
+  --font-title: "Aptos", Arial, sans-serif;
+  --font-body: "Kulim Park", Arial, sans-serif;
+  --font-product: "RR Beaver", "Arial Narrow", sans-serif;
+}
+
 @font-face {
   font-family: 'Kulim Park';
   src: url('/fonts/KulimPark-Light.ttf') format('truetype');
@@ -45,10 +51,12 @@
     /* Paleta oficial: branco / preto */
     background-color: #FFFFFF;
     color: #0A0A0A;
-    @apply font-sans antialiased;
+    font-family: var(--font-body);
+    @apply antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
     @apply tracking-tight font-bold;
   }
 

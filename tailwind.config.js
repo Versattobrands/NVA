@@ -28,8 +28,9 @@ export default {
         }
       },
       fontFamily: {
-        sans:    ['Aptos', 'Calibri', 'system-ui', 'sans-serif'],
-        display: ['"Kulim Park"', 'Aptos', 'Calibri', 'sans-serif'],
+        title: ['var(--font-title)'],
+        body: ['var(--font-body)'],
+        product: ['var(--font-product)'],
       },
     },
   },

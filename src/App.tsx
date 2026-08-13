@@ -7,7 +7,7 @@ import { FloatingWhatsAppButton } from "./components/ui/FloatingWhatsAppButton";
 // Pages
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
-import { Products } from "./pages/Products";
+import { BusinessAreas } from "./pages/BusinessAreas";
 import { Contact } from "./pages/Contact";
 import { Troppoil } from "./pages/Troppoil";
 
@@ -28,9 +28,9 @@ const DocumentTitle = () => {
     const titles: Record<string, string> = {
       "/": "Novaag | Inovação e honra no campo",
       "/quem-somos": "Quem Somos | Novaag",
-      "/produtos": "Produtos e soluções agrícolas | Novaag",
-      "/contato": "Entre em contato | Novaag",
-      "/troppoil": "Troppoil | Solução para aplicações agrícolas | Novaag"
+      "/areas-de-atuacao": "Áreas de Atuação | Novaag",
+      "/contato": "Contato | Novaag",
+      "/troppoil": "Troppoil | Novaag"
     };
     
     document.title = titles[pathname] || "Novaag";
@@ -45,14 +45,14 @@ function App() {
       <ScrollToTop />
       <DocumentTitle />
       
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-novaag-black">
         <Header />
         
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/quem-somos" element={<About />} />
-            <Route path="/produtos" element={<Products />} />
+            <Route path="/areas-de-atuacao" element={<BusinessAreas />} />
             <Route path="/contato" element={<Contact />} />
             <Route path="/troppoil" element={<Troppoil />} />
           </Routes>
