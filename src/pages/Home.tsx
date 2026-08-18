@@ -170,11 +170,15 @@ export const Home: React.FC = () => {
       </section>
 
       {/* TROPPOIL HIGHLIGHT */}
-      <section className="py-24 bg-novaag-green relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-2/3 h-full opacity-20">
-          <img src={ASSETS.images.comexBackground} alt="" className="w-full h-full object-cover object-left filter grayscale" />
-          <div className="absolute inset-0 bg-gradient-to-r from-novaag-green to-transparent" />
-        </div>
+      <section 
+        className="py-24 relative overflow-hidden"
+        style={{
+          backgroundImage: 'url("/images/background-troppoil.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-novaag-black/40 mix-blend-multiply z-0" />
         <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-12 md:mb-0 flex justify-center">
             <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Troppoil" className="w-full max-w-[500px] h-auto object-contain drop-shadow-2xl scale-110" />
@@ -184,28 +188,24 @@ export const Home: React.FC = () => {
               <img 
                 src={ASSETS.aplitecIcons.troppoil.logo} 
                 alt="Troppoil Logo" 
-                className="h-16 md:h-20 w-auto object-contain"
+                className="h-24 md:h-32 w-auto object-contain drop-shadow-lg"
               />
             </div>
             <p className="text-xl text-white/90 mb-10 leading-relaxed">
               {SITE_CONTENT.home.troppoil.text}
             </p>
-            <div className="grid grid-cols-2 gap-4 mb-10">
-              <div className="flex items-center gap-3">
-                <img src={ASSETS.aplitecIcons.troppoil.emulsificante} alt="Emulsificante, Espalhante, Adesivo" className="w-8 h-8 object-contain" />
-                <span className="text-white font-bold text-sm">Emulsificante</span>
+            <div className="flex flex-row flex-wrap gap-x-8 gap-y-6 mb-10">
+              <div className="flex items-center">
+                <img src={ASSETS.aplitecIcons.troppoil.tankMix} alt="Tank Mix Compatível" className="h-16 md:h-20 w-auto object-contain drop-shadow-lg" />
               </div>
-              <div className="flex items-center gap-3">
-                <img src={ASSETS.aplitecIcons.troppoil.emulsificante} alt="Emulsificante, Espalhante, Adesivo" className="w-8 h-8 object-contain" />
-                <span className="text-white font-bold text-sm">Espalhante</span>
+              <div className="flex items-center">
+                <img src={ASSETS.aplitecIcons.troppoil.emulsificante} alt="Emulsificante, Espalhante, Adesivo" className="h-16 md:h-20 w-auto object-contain drop-shadow-lg" />
               </div>
-              <div className="flex items-center gap-3">
-                <img src={ASSETS.aplitecIcons.troppoil.emulsificante} alt="Emulsificante, Espalhante, Adesivo" className="w-8 h-8 object-contain" />
-                <span className="text-white font-bold text-sm">Adesivo</span>
+              <div className="flex items-center">
+                <img src={ASSETS.aplitecIcons.troppoil.antiDeriva} alt="Anti-deriva" className="h-16 md:h-20 w-auto object-contain drop-shadow-lg" />
               </div>
-              <div className="flex items-center gap-3">
-                <img src={ASSETS.aplitecIcons.troppoil.antiDeriva} alt="Anti-deriva" className="w-8 h-8 object-contain" />
-                <span className="text-white font-bold text-sm">Anti-deriva</span>
+              <div className="flex items-center">
+                <img src={ASSETS.aplitecIcons.troppoil.dispersante} alt="Dispersante" className="h-16 md:h-20 w-auto object-contain drop-shadow-lg" />
               </div>
             </div>
             <Button asChild size="lg" variant="primary">
