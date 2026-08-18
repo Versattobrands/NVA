@@ -16,9 +16,9 @@ export const CTASection: React.FC<CTASectionProps> = ({
   buttonLink
 }) => {
   return (
-    <section className="py-24 border-t border-novaag-black/10 bg-novaag-black text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/img-soy.jpeg')] bg-cover bg-center opacity-20 mix-blend-overlay" />
-      <div className="absolute inset-0 bg-gradient-to-t from-novaag-black via-novaag-black/80 to-transparent" />
+    <section className="py-24 border-t border-novaag-green/20 bg-novaag-green text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/img-soy.jpeg')] bg-cover bg-center opacity-10 mix-blend-overlay" />
+      <div className="absolute inset-0 bg-gradient-to-t from-novaag-green via-novaag-green/80 to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10 text-center max-w-3xl">
         <h2 className="text-4xl md:text-5xl font-title font-bold mb-6">{title}</h2>
