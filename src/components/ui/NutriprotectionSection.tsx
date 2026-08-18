@@ -91,7 +91,7 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
             </div>
 
             {/* Right side: Sidebar Features */}
-            <div className="w-full lg:w-1/2 bg-[#2e52b2] rounded-3xl p-8 shadow-2xl border-4 border-[#1b365d]/50 flex flex-col justify-start">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center pl-0 lg:pl-12">
               <div className="flex flex-col gap-8">
                 {honra.features.map((feat, idx) => (
                   <NutriprotectionFeature key={idx} name={feat.name} icon={feat.icon} />
