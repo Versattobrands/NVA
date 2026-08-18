@@ -6,9 +6,24 @@ interface AplitecFeatureProps {
   name: string;
   icon?: string;
   darkText?: boolean;
+  iconOnly?: boolean;
 }
 
-const AplitecFeature: React.FC<AplitecFeatureProps> = ({ name, icon, darkText = false }) => {
+const AplitecFeature: React.FC<AplitecFeatureProps> = ({ name, icon, darkText = false, iconOnly = false }) => {
+  if (iconOnly) {
+    return (
+      <div className="flex flex-col items-center gap-2">
+        <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-2 shadow-lg">
+          {icon ? (
+            <img src={icon} alt={name} className="w-full h-full object-contain" />
+          ) : (
+            <div className="w-3 h-3 rounded-full bg-novaag-red" />
+          )}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-center gap-3">
       <div className="flex-shrink-0 w-14 h-14 bg-white rounded-full flex items-center justify-center p-2 shadow-sm">
@@ -61,9 +76,9 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
               </p>
             )}
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8 max-w-2xl">
+            <div className="flex flex-row flex-wrap gap-8 mt-4">
               {troppoil.features.map((feat, idx) => (
-                <AplitecFeature key={idx} name={feat.name} icon={feat.icon} />
+                <AplitecFeature key={idx} name={feat.name} icon={feat.icon} iconOnly />
               ))}
             </div>
           </div>
