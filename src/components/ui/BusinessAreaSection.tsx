@@ -22,16 +22,24 @@ export const BusinessAreaSection: React.FC<BusinessAreaSectionProps> = ({ area, 
         )}>
           
           {/* Image Side */}
-          <div className="w-full lg:w-1/2">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-novaag-green/20 mix-blend-multiply z-10" />
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
+            {area.id === "comex" ? (
               <img 
                 src={area.image} 
                 alt={area.name} 
-                className="w-full h-full object-cover filter brightness-75 hover:brightness-100 transition-all duration-700 hover:scale-105"
+                className="w-full max-w-lg object-contain filter hover:brightness-110 transition-all duration-700 hover:-translate-y-2"
               />
-              <div className="absolute inset-0 border border-white/10 z-20 pointer-events-none rounded-2xl" />
-            </div>
+            ) : (
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl w-full">
+                <div className="absolute inset-0 bg-novaag-green/20 mix-blend-multiply z-10 pointer-events-none" />
+                <img 
+                  src={area.image} 
+                  alt={area.name} 
+                  className="w-full h-full object-cover filter brightness-75 hover:brightness-100 transition-all duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 border border-white/10 z-20 pointer-events-none rounded-2xl" />
+              </div>
+            )}
           </div>
 
           {/* Content Side */}

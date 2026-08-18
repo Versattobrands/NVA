@@ -69,8 +69,8 @@ export const Home: React.FC = () => {
       </section>
 
       {/* MISSÃO, VISÃO, VALORES (HIGHLIGHTS) */}
-      <section className="py-24 bg-[url('/bg-abstract-dark.jpg')] bg-cover bg-fixed relative">
-        <div className="absolute inset-0 bg-novaag-black/80" />
+      <section className="py-24 bg-novaag-black relative">
+        <div className="absolute inset-0 bg-novaag-black/40" />
         <div className="container mx-auto px-4 relative z-10 space-y-12">
           <HighlightedStatement 
             prefix="Nossa missão é ser"
@@ -201,7 +201,7 @@ export const Home: React.FC = () => {
         </div>
         <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-12 md:mb-0 flex justify-center">
-            <img src={ASSETS.images.troppoilSquare} alt="Troppoil" className="max-h-[500px] max-w-full object-contain drop-shadow-2xl" />
+            <img src={ASSETS.images.troppoilSquare} alt="Troppoil" className="w-full aspect-[4/3] object-cover rounded-2xl shadow-2xl drop-shadow-2xl" />
           </div>
           <div className="w-full md:w-1/2 md:pl-12">
             <h2 className="text-5xl md:text-7xl font-product text-novaag-gold mb-6">

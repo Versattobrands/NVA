@@ -16,6 +16,7 @@ export type Product = {
   name: string;
   area: "Agro";
   description: string;
+  subtitle?: string;
   infoBlocks?: InfoBlock[];
   features: ProductFeature[];
   image?: string;
@@ -24,6 +25,88 @@ export type Product = {
   validationRequired?: boolean;
   notes?: string;
 };
+
+export const APLITEC_PRODUCTS: Product[] = [
+  {
+    slug: "troppoil",
+    name: "TROPPOIL",
+    area: "Agro",
+    subtitle: "Origem MINERAL com aditivos VEGETAIS",
+    description: "Adjuvante de origem mineral com aditivos vegetais, desenvolvido para diferentes aspectos da aplicação agrícola.",
+    image: ASSETS.images.troppoilSquare,
+    features: [
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.troppoil.tankMix },
+      { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.troppoil.emulsificante },
+      { name: "ANTI-DERIVA", icon: ASSETS.aplitecIcons.troppoil.antiDeriva },
+      { name: "DISPERSANTE", icon: ASSETS.icons.dispersante } // Fallback to main icons if non-specific exists
+    ],
+    featured: true
+  },
+  {
+    slug: "spray-h",
+    name: "SPRAY H",
+    area: "Agro",
+    description: "Adjuvante multifuncional para herbicidas; Use 50-100ml/ha primeiro na calda.",
+    features: [
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.sprayH.tankMix },
+      { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.sprayH.emulsificante },
+      { name: "DISPERSANTE", icon: ASSETS.aplitecIcons.sprayH.dispersante },
+      { name: "ANTI-DERIVA", icon: ASSETS.aplitecIcons.sprayH.antiDeriva },
+      { name: "ANTI-ESPUMA", icon: ASSETS.aplitecIcons.sprayH.antiEspuma },
+      { name: "REDUTOR pH", icon: ASSETS.aplitecIcons.sprayH.redutorPh }
+    ]
+  },
+  {
+    slug: "spray-if",
+    name: "SPRAY IF",
+    area: "Agro",
+    description: "Adjuvante multifuncional para inseticidas e fungicidas; use 50-100ml/ha primeiro na calda.",
+    features: [
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.sprayIf.tankMix },
+      { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.sprayIf.emulsificante },
+      { name: "DISPERSANTE", icon: ASSETS.aplitecIcons.sprayIf.dispersante },
+      { name: "ANTI-DERIVA", icon: ASSETS.aplitecIcons.sprayIf.antiDeriva },
+      { name: "ANTI-ESPUMA", icon: ASSETS.aplitecIcons.sprayIf.antiEspuma }
+    ]
+  },
+  {
+    slug: "detex",
+    name: "DETEX",
+    area: "Agro",
+    description: "Emulsificação de óleos vegetais brutos e degomados.",
+    features: [
+      { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.detex.emulsificante },
+      { name: "DISPERSANTE", icon: ASSETS.aplitecIcons.detex.dispersante }
+    ]
+  },
+  {
+    slug: "dsolv-protax",
+    name: "DSOLV + PROTAX",
+    area: "Agro",
+    description: "Compatibiliza misturas complexas de glifosato e outros defensivos com fertilizantes.",
+    features: [
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.dsolv.tankMix }
+    ]
+  },
+  {
+    slug: "dsolv-m",
+    name: "DSOLV + M",
+    area: "Agro",
+    description: "Compatibiliza misturas complexas de defensivos EC / Óleos / MANCOZEB.",
+    features: [
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.dsolvM.tankMix }
+    ]
+  },
+  {
+    slug: "mataspuma",
+    name: "MATASPUMA",
+    area: "Agro",
+    description: "Elimina a espuma indesejada.",
+    features: [
+      { name: "ANTI-ESPUMA", icon: ASSETS.aplitecIcons.mataspuma.antiEspuma }
+    ]
+  }
+];
 
 export const AGRO_PRODUCTS: Product[] = [
   {

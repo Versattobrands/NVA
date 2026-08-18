@@ -29,6 +29,41 @@ export const ASSETS = {
     nutricao: "/icons.svg#check", // TODO: Update when official asset is available
     enxofreSoluvel: "/icons.svg#check", // TODO: Update when official asset is available
   },
+  aplitecIcons: {
+    troppoil: {
+      tankMix: "/images/troppoil/tank mix.png",
+      emulsificante: "/images/troppoil/emulsificante espalhe adesivo.png",
+      antiDeriva: "/images/troppoil/anti-deriva.png",
+    },
+    sprayH: {
+      tankMix: "/images/spray h/tank mix compativel.png",
+      emulsificante: "/images/spray h/emulsificante espalhante adesivo.png",
+      dispersante: "/images/spray h/dispersante.png",
+      antiDeriva: "/images/spray h/anti-deriva.png",
+      antiEspuma: "/images/spray h/anti-espuma.png",
+      redutorPh: "/images/spray h/redutor de ph.png",
+    },
+    sprayIf: {
+      tankMix: "/images/spray if/tank mix compativel.png",
+      emulsificante: "/images/spray if/emulsificante espalhante adesivo.png",
+      dispersante: "/images/spray if/dispersante.png",
+      antiDeriva: "/images/spray if/anti-deriva.png",
+      antiEspuma: "/images/spray if/anti-espuma.png",
+    },
+    detex: {
+      emulsificante: "/images/Detex/emulsificante espalhante adesivo.png",
+      dispersante: "/images/Detex/dispersante.png",
+    },
+    dsolv: {
+      tankMix: "/images/Dsolv/tank mix compativel.png",
+    },
+    dsolvM: {
+      tankMix: "/images/Dsolv +M/tank mix compativel.png",
+    },
+    mataspuma: {
+      antiEspuma: "/images/mataspuma/anti-espuma.png",
+    }
+  },
   logos: {
     principal: "/logo-principal.svg",
     negativo: "/logo-negativo.svg",
@@ -49,7 +84,7 @@ export const ASSETS = {
     hero: "/images/background-hero-nva.png",
     aboutHero: "/images/background-conexao-nva.png",
     troppoilBackground: "/images/background-conexao1-nva.png",
-    troppoilSquare: "/images/background-troppoil.png",
+    troppoilSquare: "/images/quadro-troppoil.jpg",
     productsHero: "/images/products_hero.png",
     map: "/images/mapa-brasil.png",
     coffee: "/img-coffee.jpg",

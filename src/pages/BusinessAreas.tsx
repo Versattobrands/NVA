@@ -3,6 +3,8 @@ import { BusinessAreaSection } from "../components/ui/BusinessAreaSection";
 import { ProductRow } from "../components/ui/ProductRow";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { BUSINESS_AREAS } from "../data/businessAreas";
+import { APLITEC_PRODUCTS } from "../data/products";
+import { AplitecSection } from "../components/ui/AplitecSection";
 import { CTASection } from "../components/ui/CTASection";
 import { ASSETS } from "../data/assetsMap";
 
@@ -27,20 +29,18 @@ export const BusinessAreas: React.FC = () => {
           
           {/* Produtos Agro */}
           {agroArea.products && agroArea.products.length > 0 && (
-            <div id="produtos" className="bg-novaag-green py-24">
+            <div id="produtos" className="bg-[#1A251E] py-24 border-t border-white/5">
               <div className="container mx-auto px-4 md:px-6 mb-16">
                 <SectionHeading 
-                  title="Produtos" 
-                  subtitle="Atuação Agro" 
+                  title="Aplitec" 
+                  subtitle="Sub-linha" 
                   dark 
                   align="center"
                 />
               </div>
               
-              <div className="flex flex-col">
-                {agroArea.products.map((product, idx) => (
-                  <ProductRow key={product.slug} product={product} index={idx} />
-                ))}
+              <div className="container mx-auto px-4 lg:px-12">
+                <AplitecSection products={APLITEC_PRODUCTS} />
               </div>
             </div>
           )}
