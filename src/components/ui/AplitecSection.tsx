@@ -81,7 +81,7 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
           </div>
           
           <div className="relative z-10 w-full md:w-2/5 flex items-center justify-center min-h-[400px] overflow-hidden p-8">
-             <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Troppoil" className="w-full h-full object-contain drop-shadow-2xl" />
+             <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Troppoil" className="w-full h-full object-contain mix-blend-multiply drop-shadow-2xl" />
           </div>
           
           <div className="absolute bottom-0 left-0 w-full h-8 bg-novaag-red transform -skew-x-[20deg] origin-left z-20 translate-y-1/2 scale-110"></div>
