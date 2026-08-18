@@ -32,7 +32,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         </span>
       )}
       <h2 className={cn(
-        "text-4xl md:text-5xl font-title",
+        "text-5xl md:text-6xl font-['Aptos',_sans-serif] italic font-black uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]",
         dark ? "text-white" : "text-novaag-black"
       )}>
         {title}

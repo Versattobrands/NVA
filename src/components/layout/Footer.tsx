@@ -11,9 +11,9 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col gap-6">
             <Link to="/" className="inline-block group">
               <img
-                src={ASSETS.logos.negativo}
+                src={ASSETS.logos.principal}
                 alt="Novaag"
-                className="h-16 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
+                className="h-24 md:h-28 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
               />
             </Link>
             <p className="text-novaag-gold font-bold font-title text-base uppercase tracking-widest">

@@ -11,39 +11,40 @@ interface TimelineEvent {
 
 const EVENTS: TimelineEvent[] = [
   {
-    year: "199X",
-    title: "Início da trajetória",
-    image: ASSETS.logos.enbi,
-    description: "Com cerca de 25 anos de experiência no mercado agrícola brasileiro..."
+    year: "2015",
+    title: "ITATEC",
+    image: ASSETS.logos.itatec,
+    description: "Início das operações com a marca ITATEC."
   },
   {
     year: "2015",
-    title: "NovaAG",
-    image: ASSETS.logos.novaAgAntigo,
-    description: "Consolidação da empresa no mercado promovendo sustentabilidade e inovação."
+    title: "SC.MT",
+    image: ASSETS.logos.scMt,
+    description: "Atuação sob a marca SC.MT."
   },
   {
     year: "2019",
-    title: "Evolução da marca",
-    image: ASSETS.logos.novaAgAntigoSvg
+    title: "NovaAG",
+    image: ASSETS.logos.novaAgAntigoSvg,
+    description: "Evolução do modelo de negócio e marca NovaAG."
   },
   {
     year: "2023",
-    title: "Itatec",
-    image: ASSETS.logos.itatec,
-    description: "TODO: Inserir descrição do marco Itatec."
+    title: "ENBI",
+    image: ASSETS.logos.enbi,
+    description: "Integração da ENBI à trajetória."
   },
   {
     year: "2024",
-    title: "Planta Industrial",
-    image: ASSETS.logos.scMt,
-    description: "Planta em Campo Novo do Parecis - MT."
+    title: "NovaAG",
+    image: ASSETS.logos.novaAgAntigo,
+    description: "Nova identidade visual NovaAG."
   },
   {
     year: "2026",
-    title: "O Futuro",
+    title: "NVA",
     image: ASSETS.logos.novaAg2026,
-    description: "Inovação e expansão."
+    description: "O Futuro: Inovação e expansão como NVA."
   }
 ];
 
@@ -80,7 +81,7 @@ export const Timeline: React.FC = () => {
                       <img 
                         src={event.image} 
                         alt={event.title} 
-                        className="h-full object-contain filter grayscale hover:grayscale-0 transition-all"
+                        className="h-full object-contain transition-all"
                       />
                     </div>
                   )}

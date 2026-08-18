@@ -7,6 +7,7 @@ import { CTASection } from "../components/ui/CTASection";
 import { SITE_CONTENT } from "../data/siteContent";
 import { ASSETS } from "../data/assetsMap";
 import { AGRO_PRODUCTS } from "../data/products";
+import { motion } from "framer-motion";
 
 export const Home: React.FC = () => {
   return (
@@ -100,7 +101,14 @@ export const Home: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Agro */}
-            <div className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-novaag-green/20">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-novaag-green/20"
+            >
               <img src={ASSETS.images.field1} alt="Agro" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-novaag-black via-novaag-black/50 to-transparent" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -112,10 +120,17 @@ export const Home: React.FC = () => {
                   <Link to="/areas-de-atuacao#agro">Conheça o Agro</Link>
                 </Button>
               </div>
-            </div>
+            </motion.div>
             
             {/* Comex */}
-            <div className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-novaag-green/20">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-novaag-green/20"
+            >
               <img src={ASSETS.images.map} alt="Comex" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-novaag-black via-novaag-black/50 to-transparent" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -127,10 +142,17 @@ export const Home: React.FC = () => {
                   <Link to="/areas-de-atuacao#comex">Conheça o Comex</Link>
                 </Button>
               </div>
-            </div>
+            </motion.div>
             
             {/* Industrial */}
-            <div className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-novaag-green/20">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-novaag-green/20"
+            >
               <img src={ASSETS.images.industry} alt="Industrial" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-novaag-black via-novaag-black/50 to-transparent" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -142,7 +164,7 @@ export const Home: React.FC = () => {
                   <Link to="/areas-de-atuacao#industrial">Conheça o Industrial</Link>
                 </Button>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -173,12 +195,13 @@ export const Home: React.FC = () => {
 
       {/* TROPPOIL HIGHLIGHT */}
       <section className="py-24 bg-novaag-green relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-          <img src={ASSETS.products.troppoil} alt="" className="w-full h-full object-contain object-right filter grayscale" />
+        <div className="absolute top-0 right-0 w-2/3 h-full opacity-20">
+          <img src={ASSETS.images.troppoilBackground} alt="" className="w-full h-full object-cover object-left filter grayscale" />
+          <div className="absolute inset-0 bg-gradient-to-r from-novaag-green to-transparent" />
         </div>
         <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-12 md:mb-0 flex justify-center">
-            <img src={ASSETS.products.troppoil} alt="Troppoil" className="max-h-[500px] object-contain drop-shadow-2xl" />
+            <img src={ASSETS.images.troppoilSquare} alt="Troppoil" className="max-h-[500px] max-w-full object-contain drop-shadow-2xl" />
           </div>
           <div className="w-full md:w-1/2 md:pl-12">
             <h2 className="text-5xl md:text-7xl font-product text-novaag-gold mb-6">

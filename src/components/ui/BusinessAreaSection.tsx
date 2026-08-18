@@ -14,7 +14,7 @@ export const BusinessAreaSection: React.FC<BusinessAreaSectionProps> = ({ area, 
   const isEven = index % 2 === 0;
 
   return (
-    <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#0A0A0A' }}>
+    <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className={cn(
           "flex flex-col gap-12 lg:gap-20 items-center",

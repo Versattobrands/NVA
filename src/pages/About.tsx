@@ -10,10 +10,10 @@ export const About: React.FC = () => {
   return (
     <div className="flex flex-col w-full bg-novaag-black text-white">
       {/* HERO SECTION */}
-      <section className="relative pt-32 pb-24 overflow-hidden min-h-[60vh] flex items-center">
+      <section className="relative pt-32 pb-24 overflow-hidden min-h-[60vh] flex items-center bg-novaag-green">
         <div className="absolute inset-0 z-0">
-          <img src={ASSETS.images.coffee} alt="Campo de café" className="w-full h-full object-cover filter brightness-[0.3]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-novaag-black/80 to-novaag-black"></div>
+          <img src={ASSETS.images.aboutHero} alt="Sobre nós" className="w-full h-full object-cover opacity-80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-novaag-black/50 to-novaag-black"></div>
         </div>
         
         <div className="container relative z-10 mx-auto px-4 md:px-6 text-center max-w-4xl">
@@ -91,19 +91,19 @@ export const About: React.FC = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="p-8 bg-novaag-black/5 rounded-2xl border border-novaag-black/10 text-center">
+            <div className="p-8 bg-novaag-black/5 rounded-2xl border border-novaag-black/10 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-novaag-green/30">
               <h4 className="text-2xl font-title font-bold text-novaag-green mb-4">Agro</h4>
               <p className="text-novaag-black/70">Soluções biotecnológicas e químicas para o campo.</p>
             </div>
-            <div className="p-8 bg-novaag-black/5 rounded-2xl border border-novaag-black/10 text-center">
+            <div className="p-8 bg-novaag-black/5 rounded-2xl border border-novaag-black/10 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-novaag-green/30">
               <h4 className="text-2xl font-title font-bold text-novaag-green mb-4">Industrial</h4>
               <p className="text-novaag-black/70">Insumos especiais e terceirizações.</p>
             </div>
-            <div className="p-8 bg-novaag-black/5 rounded-2xl border border-novaag-black/10 text-center">
+            <div className="p-8 bg-novaag-black/5 rounded-2xl border border-novaag-black/10 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-novaag-green/30">
               <h4 className="text-2xl font-title font-bold text-novaag-green mb-4">Food</h4>
               <p className="text-novaag-black/70">Proteínas e aditivos para health food.</p>
             </div>
-            <div className="p-8 bg-novaag-gold/10 rounded-2xl border border-novaag-gold/30 text-center relative overflow-hidden">
+            <div className="p-8 bg-novaag-gold/10 rounded-2xl border border-novaag-gold/30 text-center relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-novaag-gold/20 hover:border-novaag-gold/60">
               <div className="absolute top-2 right-2 bg-novaag-gold text-novaag-black text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Em breve</div>
               <h4 className="text-2xl font-title font-bold text-novaag-gold mb-4 mt-2">Atitude</h4>
               <p className="text-novaag-black/70">Propósito, bens de consumo e projetos especiais.</p>

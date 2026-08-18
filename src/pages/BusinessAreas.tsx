@@ -4,6 +4,7 @@ import { ProductRow } from "../components/ui/ProductRow";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { BUSINESS_AREAS } from "../data/businessAreas";
 import { CTASection } from "../components/ui/CTASection";
+import { ASSETS } from "../data/assetsMap";
 
 export const BusinessAreas: React.FC = () => {
   const agroArea = BUSINESS_AREAS.find(a => a.id === "agro");
@@ -11,7 +12,14 @@ export const BusinessAreas: React.FC = () => {
   const industrialArea = BUSINESS_AREAS.find(a => a.id === "industrial");
 
   return (
-    <div className="flex flex-col w-full bg-novaag-black min-h-screen pt-24">
+    <div className="flex flex-col w-full bg-novaag-black min-h-screen pt-24 relative">
+      {/* Background Image */}
+      <div className="fixed inset-0 z-0 opacity-10">
+        <img src={ASSETS.images.hero} alt="" className="w-full h-full object-cover filter grayscale" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-novaag-black/50"></div>
+      </div>
+      
+      <div className="relative z-10 w-full flex flex-col">
       {/* Agro Section */}
       {agroArea && (
         <div id="agro">
@@ -60,6 +68,7 @@ export const BusinessAreas: React.FC = () => {
         buttonText="Fale com um especialista"
         buttonLink="/contato"
       />
+      </div>
     </div>
   );
 };
