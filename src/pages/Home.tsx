@@ -68,26 +68,52 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* MISSÃO, VISÃO, VALORES (HIGHLIGHTS) */}
-      <section className="py-24 bg-novaag-black relative">
-        <div className="absolute inset-0 bg-novaag-black/40" />
-        <div className="container mx-auto px-4 relative z-10 space-y-12">
-          <HighlightedStatement 
-            prefix="Nossa missão é ser"
-            highlight={SITE_CONTENT.institutional.mission.highlight}
-            suffix="e desenvolver alternativas viáveis para os desafios técnicos da agricultura."
-          />
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-          <HighlightedStatement 
-            prefix="Otimizar custos e margens por meio de"
-            highlight={SITE_CONTENT.institutional.vision.highlights[0]}
-            suffix="com velocidade, assertividade e eficiência."
-          />
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-          <HighlightedStatement 
-            highlight={SITE_CONTENT.institutional.values.highlight}
-            suffix="Gestão transparente e compartilhada, honestidade e ética."
-          />
+      {/* MISSÃO, VISÃO, VALORES */}
+      <section className="py-24 bg-novaag-green bg-cover bg-center relative" style={{ backgroundImage: "url('/images/background-conexao-nva.png')" }}>
+        <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
+        <div className="container mx-auto px-4 relative z-10 max-w-5xl">
+          <div className="flex flex-col gap-6">
+            
+            {/* MISSÃO */}
+            <div className="flex flex-col md:flex-row items-center md:items-stretch gap-6 w-full">
+              <div className="w-full md:w-1/3 flex items-center justify-center md:justify-end pr-0 md:pr-8">
+                <h2 className="text-4xl md:text-5xl font-title font-black text-white italic tracking-widest uppercase drop-shadow-md">MISSÃO</h2>
+              </div>
+              <div className="w-full md:w-2/3 bg-[#243525]/90 border border-[#3b593d] rounded-tl-sm rounded-bl-sm rounded-tr-[2rem] rounded-br-[2rem] p-6 md:p-8 shadow-2xl relative overflow-hidden">
+                <div className="absolute right-0 top-0 bottom-0 w-1 bg-[#478f44]"></div>
+                <p className="text-white text-lg md:text-xl font-medium leading-relaxed font-body">
+                  Ser <span className="font-black italic">REFERÊNCIA EM INOVAÇÕES</span> e alternativas viáveis aos problemas técnicos da agricultura.
+                </p>
+              </div>
+            </div>
+
+            {/* VISÃO */}
+            <div className="flex flex-col md:flex-row items-center md:items-stretch gap-6 w-full">
+              <div className="w-full md:w-1/3 flex items-center justify-center md:justify-end pr-0 md:pr-8">
+                <h2 className="text-4xl md:text-5xl font-title font-black text-white italic tracking-widest uppercase drop-shadow-md">VISÃO</h2>
+              </div>
+              <div className="w-full md:w-2/3 bg-[#243525]/90 border border-[#3b593d] rounded-tl-sm rounded-bl-sm rounded-tr-[2rem] rounded-br-[2rem] p-6 md:p-8 shadow-2xl relative overflow-hidden">
+                <div className="absolute right-0 top-0 bottom-0 w-1 bg-[#478f44]"></div>
+                <p className="text-white text-lg md:text-xl font-medium leading-relaxed font-body">
+                  Otimizar custos e margens das lavouras defendendo o ponto de vista do agricultor através de <span className="font-black italic">SOLUÇÕES SUSTENTÁVEIS</span> apoiados pela filosofia de velocidade, assertividade e eficiência.
+                </p>
+              </div>
+            </div>
+
+            {/* VALORES */}
+            <div className="flex flex-col md:flex-row items-center md:items-stretch gap-6 w-full">
+              <div className="w-full md:w-1/3 flex items-center justify-center md:justify-end pr-0 md:pr-8">
+                <h2 className="text-4xl md:text-5xl font-title font-black text-white italic tracking-widest uppercase drop-shadow-md">VALORES</h2>
+              </div>
+              <div className="w-full md:w-2/3 bg-[#243525]/90 border border-[#3b593d] rounded-tl-sm rounded-bl-sm rounded-tr-[2rem] rounded-br-[2rem] p-6 md:p-8 shadow-2xl relative overflow-hidden">
+                <div className="absolute right-0 top-0 bottom-0 w-1 bg-[#478f44]"></div>
+                <p className="text-white text-lg md:text-xl font-medium leading-relaxed font-body">
+                  <span className="font-black italic">PAIXÃO PELO AGRONEGÓCIO</span>, gestão transparente e compartilhada, honestidade e ética.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
