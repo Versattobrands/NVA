@@ -23,7 +23,7 @@ export const Troppoil: React.FC = () => {
             <span className="text-novaag-gold font-bold tracking-widest uppercase mb-4 text-xs md:text-sm">
               Linha Agro
             </span>
-            <img src={ASSETS.aplitecIcons.troppoil.logo} alt="Troppoil" className="w-full max-w-[300px] mb-6 drop-shadow-lg" />
+            <img src={ASSETS.aplitecIcons.troppoil.logo} alt="Troppoil" className="w-full max-w-[500px] mb-8 drop-shadow-lg" />
             <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 max-w-xl">
               Uma solução de origem mineral com aditivos vegetais para diferentes aspectos da aplicação agrícola.
             </p>
@@ -39,7 +39,7 @@ export const Troppoil: React.FC = () => {
 
           {/* Direita: Imagem do Produto */}
           <div className="w-full md:w-1/2 flex items-center justify-center min-h-[300px]">
-            <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Produto Troppoil" className="w-full max-w-[400px] h-auto object-contain drop-shadow-2xl" />
+            <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Produto Troppoil" className="w-[120%] max-w-[600px] h-auto object-contain drop-shadow-2xl scale-125 translate-x-4 md:translate-x-8" />
           </div>
         </div>
       </section>
