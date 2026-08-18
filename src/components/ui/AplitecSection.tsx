@@ -56,35 +56,45 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
       
       {/* TROPPOIL BANNER */}
       {troppoil && (
-        <div className="relative w-full rounded-[2rem] overflow-hidden bg-novaag-green text-white shadow-2xl border-t-8 border-novaag-red flex flex-col md:flex-row pb-6 md:pb-0">
-          {/* Fundo decorativo */}
-          <div className="absolute inset-0 z-0 opacity-20">
-            <img src={troppoil.image} alt="" className="w-full h-full object-cover filter blur-md" />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-novaag-black via-novaag-black/90 to-novaag-black/30 z-0" />
+        <div className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl flex flex-col md:flex-row pb-6 md:pb-0">
+          {/* Fundo de imagem cobrindo todo o bloco */}
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'url("/images/background-troppoil.png")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+          <div className="absolute inset-0 bg-novaag-black/40 mix-blend-multiply z-0" />
           
-          {/* Conteúdo */}
-          <div className="relative z-10 w-full md:w-3/5 p-8 md:p-16 flex flex-col justify-center">
+          {/* Esquerda: Produto */}
+          <div className="relative z-10 w-full md:w-1/2 flex items-center justify-center min-h-[400px] overflow-hidden p-8 lg:p-12">
+             <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Produto Troppoil" className="w-full h-auto max-w-[500px] object-contain drop-shadow-2xl" />
+          </div>
+          
+          {/* Direita: Conteúdo */}
+          <div className="relative z-10 w-full md:w-1/2 p-8 md:py-16 md:pr-16 flex flex-col justify-center items-start">
             <img
               src={ASSETS.aplitecIcons.troppoil.logo}
               alt="Troppoil"
-              className="h-24 md:h-36 w-auto object-contain mb-6 drop-shadow-lg"
+              className="h-16 md:h-24 w-auto object-contain mb-6 drop-shadow-lg"
             />
 
-
+            <p className="text-white text-lg font-medium leading-relaxed mb-8">
+              {troppoil.description || "Uma solução de origem mineral com aditivos vegetais para diferentes aspectos da aplicação agrícola."}
+            </p>
             
-            <div className="flex flex-row flex-wrap gap-8 mt-4">
+            <div className="flex flex-row flex-wrap gap-x-8 gap-y-6 mb-10">
               {troppoil.features.map((feat, idx) => (
-                <AplitecFeature key={idx} name={feat.name} icon={feat.icon} iconOnly />
+                <AplitecFeature key={idx} name={feat.name} icon={feat.icon} />
               ))}
             </div>
+
+            <a href="/troppoil" className="bg-novaag-gold hover:bg-yellow-500 text-novaag-black font-bold py-3 px-8 rounded-md transition-colors shadow-lg">
+              Conheça o Troppoil
+            </a>
           </div>
-          
-          <div className="relative z-10 w-full md:w-2/5 flex items-center justify-center min-h-[400px] overflow-hidden p-8">
-             <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Troppoil" className="w-full h-full object-contain mix-blend-multiply drop-shadow-2xl" />
-          </div>
-          
-          <div className="absolute bottom-0 left-0 w-full h-8 bg-novaag-red transform -skew-x-[20deg] origin-left z-20 translate-y-1/2 scale-110"></div>
         </div>
       )}
 
