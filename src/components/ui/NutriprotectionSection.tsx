@@ -7,7 +7,7 @@ interface NutriprotectionFeatureProps {
   icon?: string;
 }
 
-const NutriprotectionFeature: React.FC<NutriprotectionFeatureProps> = ({ name, icon }) => {
+export const NutriprotectionFeature: React.FC<NutriprotectionFeatureProps> = ({ name, icon }) => {
   return (
     <div className="flex items-center justify-start">
       {icon ? (

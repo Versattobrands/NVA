@@ -158,6 +158,18 @@ export const ASSETS = {
       bugVerdePequeno: "/images/Bioshock/percevejo_verde_pequeno.jpg",
       bugVerde: "/images/Bioshock/percevejo_verde.jpg",
       bugBarrigaVerde: "/images/Bioshock/percevejo_barriga_verde.jpg",
+    },
+    phn: {
+      logo: "/images/phn/logo_phn.svg",
+      disturbioNutricional: "/images/phn/disturbio_nutricional.png",
+      tankMix: "/images/phn/tank_mix_compativel.png",
+      antiEstresse: "/images/phn/anti_estresse.png",
+      phNeutro: "/images/phn/ph_neutro.png",
+    },
+    pme: {
+      logo: "/images/pmf/logo_pme.svg",
+      disturbioNutricional: "/images/pmf/disturbio_nutricional.png",
+      tankMix: "/images/pmf/tank_mix_compativel.png",
     }
   },
   logos: {
@@ -183,6 +195,7 @@ export const ASSETS = {
     aplitecBackground: "/images/background-aplitec.jpg",
     stimulusBackground: "/images/background-stimulus.jpg",
     nutriprotectionBackground: "/images/background-nutriprotection.jpg",
+    pmeBackground: "/images/background_pme.jpg",
     troppoilSquare: "/images/quadro-troppoil.jpg",
     productsHero: "/images/products_hero.png",
     map: "/images/mapa-brasil.png",

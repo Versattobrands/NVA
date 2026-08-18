@@ -1,10 +1,11 @@
 import React from "react";
 import { BusinessAreaSection } from "../components/ui/BusinessAreaSection";
 import { BUSINESS_AREAS } from "../data/businessAreas";
-import { APLITEC_PRODUCTS, STIMULUS_PRODUCTS, NUTRIPROTECTION_PRODUCTS } from "../data/products";
+import { APLITEC_PRODUCTS, STIMULUS_PRODUCTS, NUTRIPROTECTION_PRODUCTS, PME_PRODUCTS } from "../data/products";
 import { AplitecSection } from "../components/ui/AplitecSection";
 import { StimulusSection } from "../components/ui/StimulusSection";
 import { NutriprotectionSection } from "../components/ui/NutriprotectionSection";
+import { PmeSection } from "../components/ui/PmeSection";
 import { CTASection } from "../components/ui/CTASection";
 import { ASSETS } from "../data/assetsMap";
 
@@ -111,8 +112,34 @@ export const BusinessAreas: React.FC = () => {
                 </div>
               </div>
 
-              <div className="container mx-auto px-4 lg:px-12">
+              <div className="container mx-auto px-4 lg:px-12 pb-16">
                 <NutriprotectionSection products={NUTRIPROTECTION_PRODUCTS} />
+              </div>
+
+              {/* PME SECTION */}
+              <div className="w-full relative py-24 mb-16 overflow-hidden flex items-center justify-center border-t-4 border-novaag-red">
+                <div 
+                  className="absolute inset-0 z-0"
+                  style={{
+                    backgroundImage: `url(${ASSETS.images.pmeBackground})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                />
+                <div className="absolute inset-0 bg-black/50 z-10" />
+                
+                <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center">
+                  <div className="text-white font-bold text-xl md:text-2xl tracking-[0.1em] mb-2 drop-shadow-md">
+                    AGRO-LINHA:
+                  </div>
+                  <h2 className="text-4xl md:text-6xl font-black font-title text-white uppercase tracking-tight drop-shadow-lg italic">
+                    PÓ<br/>MICRONIZADO<br/>ESPECIAL
+                  </h2>
+                </div>
+              </div>
+
+              <div className="container mx-auto px-4 lg:px-12 pb-16">
+                <PmeSection products={PME_PRODUCTS} />
               </div>
             </div>
           )}

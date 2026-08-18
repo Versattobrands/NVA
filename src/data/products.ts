@@ -525,3 +525,30 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
     ]
   }
 ];
+
+export const PME_PRODUCTS: Product[] = [
+  {
+    slug: "phn",
+    name: "PHN",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.phn.logo,
+    description: "Linha pHn = pH Neutro e com alta COMPATIBILIDADE com inseticidas e fungicidas",
+    features: [
+      { name: "DISTÚRBIO NUTRICIONAL", icon: ASSETS.nutriprotectionIcons.phn.disturbioNutricional },
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.nutriprotectionIcons.phn.tankMix },
+      { name: "ANTI-ESTRESSE", icon: ASSETS.nutriprotectionIcons.phn.antiEstresse },
+      { name: "pH NEUTRO", icon: ASSETS.nutriprotectionIcons.phn.phNeutro }
+    ]
+  },
+  {
+    slug: "pme",
+    name: "PME",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.pme.logo,
+    description: "Linha de pó micronizado especial, totalmente solúvel e de alta compatibilidade",
+    features: [
+      { name: "DISTÚRBIO NUTRICIONAL", icon: ASSETS.nutriprotectionIcons.pme.disturbioNutricional },
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.nutriprotectionIcons.pme.tankMix }
+    ]
+  }
+];
