@@ -143,6 +143,13 @@ export const ASSETS = {
       logo: "/images/Suncal/logo_Suncal.png",
       disturbioNutricional: "/images/Suncal/disturbio_nutricional.png",
       efeitoProtetor: "/images/Suncal/efeito_protetor.png",
+    },
+    bioshock: {
+      logo: "/images/Bioshock/logo_bioshok.png",
+      bioSinergia: "/images/Bioshock/bio_sinergia.png",
+      multiMecanismoAcao: "/images/Bioshock/multi_mecanismo_de_acao.png",
+      phNeutro: "/images/Bioshock/ph_neutro.png",
+      tankMix: "/images/Bioshock/tank_mix_compativel.png",
     }
   },
   logos: {

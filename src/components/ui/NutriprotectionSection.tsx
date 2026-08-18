@@ -25,7 +25,8 @@ interface NutriprotectionSectionProps {
 export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ products }) => {
   const honra = products.find(p => p.slug === "honra");
   const forcaSanit = products.find(p => p.slug === "forca-sanit");
-  const horizontalProducts = products.filter(p => p.slug !== "honra" && p.slug !== "forca-sanit");
+  const bioshock = products.find(p => p.slug === "bioshock");
+  const horizontalProducts = products.filter(p => p.slug !== "honra" && p.slug !== "forca-sanit" && p.slug !== "bioshock");
 
   const getBgColor = (slug: string) => {
     switch(slug) {
@@ -109,6 +110,79 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
                 <NutriprotectionFeature key={idx} name={feat.name} icon={feat.icon} />
               ))}
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* BIOSHOCK HERO */}
+      {bioshock && (
+        <div className="relative w-full rounded-[2rem] overflow-hidden bg-[#0e452a] text-white shadow-2xl flex flex-col pb-6 md:pb-12">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0b3320] to-[#125936] z-0" />
+          
+          <div className="relative z-10 w-full p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-12">
+            
+            {/* Left side: Logo & Specificity Boxes */}
+            <div className="w-full lg:w-1/2 flex flex-col justify-start">
+              {bioshock.logo && (
+                <img
+                  src={bioshock.logo}
+                  alt={bioshock.name}
+                  className="w-full max-w-[400px] object-contain drop-shadow-lg mb-12"
+                />
+              )}
+              
+              <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="bg-[#125936] border-2 border-[#167044] text-white font-bold py-6 px-2 text-center shadow-lg text-sm md:text-base flex items-center justify-center">
+                  CONTATO
+                </div>
+                <div className="bg-[#125936] border-2 border-[#167044] text-white font-bold py-6 px-2 text-center shadow-lg text-sm md:text-base flex items-center justify-center">
+                  ESPECIFICIDADE
+                </div>
+                <div className="bg-[#125936] border-2 border-[#167044] text-white font-bold py-6 px-2 text-center shadow-lg text-sm md:text-base flex items-center justify-center">
+                  SINERGIA
+                </div>
+              </div>
+
+              <div className="grid grid-cols-4 gap-2 text-center text-xs md:text-sm font-medium">
+                <div>
+                  <div className="h-16 w-full bg-[#167044] rounded-sm mb-2 opacity-50 flex items-center justify-center text-[10px]">Sem imagem</div>
+                  Percevejo Marrom<br/><span className="text-[10px]">(Euschistus Heros)</span>
+                </div>
+                <div>
+                  <div className="h-16 w-full bg-[#167044] rounded-sm mb-2 opacity-50 flex items-center justify-center text-[10px]">Sem imagem</div>
+                  Percevejo Verde Pequeno<br/><span className="text-[10px]">(Piezodorus Guildinii)</span>
+                </div>
+                <div>
+                  <div className="h-16 w-full bg-[#167044] rounded-sm mb-2 opacity-50 flex items-center justify-center text-[10px]">Sem imagem</div>
+                  Percevejo Verde<br/><span className="text-[10px]">(Nezara Viridula)</span>
+                </div>
+                <div>
+                  <div className="h-16 w-full bg-[#167044] rounded-sm mb-2 opacity-50 flex items-center justify-center text-[10px]">Sem imagem</div>
+                  Percevejo Barriga Verde<br/><span className="text-[10px]">(Diceraeus Furcatus)</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side: Sidebar Features */}
+            <div className="w-full lg:w-1/2 flex flex-col justify-start relative">
+              <div className="absolute inset-0 bg-[#428135] opacity-20 rounded-3xl z-0" />
+              
+              <div className="relative z-10 p-8 flex flex-col justify-center h-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                  {bioshock.features.map((feat, idx) => (
+                    <NutriprotectionFeature key={idx} name={feat.name} icon={feat.icon} />
+                  ))}
+                </div>
+                
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-black italic text-right leading-tight drop-shadow-md">
+                  Acondicionador<br />
+                  para pulverizações<br />
+                  EFICIENTES contra<br />
+                  PERCEVEJOS
+                </h3>
+              </div>
+            </div>
+
           </div>
         </div>
       )}

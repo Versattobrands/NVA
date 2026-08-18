@@ -510,5 +510,18 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.suncal.efeitoProtetor },
       { name: "ANTI-ESTRESSE", icon: ASSETS.stimulusIcons.stimatrixGold.antiEstresse } // fallback
     ]
+  },
+  {
+    slug: "bioshock",
+    name: "BIOSHOCK",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.bioshock.logo,
+    description: "Acondicionador para pulverizações EFICIENTES contra PERCEVEJOS",
+    features: [
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.nutriprotectionIcons.bioshock.tankMix },
+      { name: "BIO SINERGIA", icon: ASSETS.nutriprotectionIcons.bioshock.bioSinergia },
+      { name: "pH NEUTRO", icon: ASSETS.nutriprotectionIcons.bioshock.phNeutro },
+      { name: "MULTI MECANISMO DE AÇÃO", icon: ASSETS.nutriprotectionIcons.bioshock.multiMecanismoAcao }
+    ]
   }
 ];
