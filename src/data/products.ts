@@ -342,3 +342,63 @@ export const AGRO_PRODUCTS: Product[] = [
     notes: "Usar a grafia oficial encontrada nos assets. Não afirmar controle de pragas sem validação regulatória."
   }
 ];
+
+export const STIMULUS_PRODUCTS: Product[] = [
+  {
+    slug: "stimatrix-gold",
+    name: "STIMATRIX GOLD",
+    area: "Agro",
+    logo: ASSETS.stimulusIcons.stimatrixGold.logo,
+    description: "Nutrição e proteção de alta performance.",
+    infoBlocks: [
+      {
+        title: "Nutrientes Elaborados:",
+        highlight: "L-aminoácidos",
+        description: "Carboidratos de origem vegetal."
+      },
+      {
+        title: "Nutrientes Minerais:",
+        highlight: "Todos os 17 Macros/Micros",
+        description: "Nutrientes inclusos Selênio."
+      },
+      {
+        title: "Componentes:",
+        highlight: "Elicitores de PGRs",
+        description: "com Algas"
+      }
+    ],
+    features: [
+      { name: "ANTI-ESTRESSE", icon: ASSETS.stimulusIcons.stimatrixGold.antiEstresse },
+      { name: "EFEITO PROTETOR", icon: ASSETS.stimulusIcons.stimatrixGold.efeitoProtetor },
+      { name: "BIO SINERGIA", icon: ASSETS.stimulusIcons.stimatrixGold.bioSinergia },
+      { name: "MULTI MECANISMO DE AÇÃO", icon: ASSETS.stimulusIcons.stimatrixGold.multiMecanismoAcao },
+      { name: "ESTIMULA EVOLUÇÃO", icon: ASSETS.stimulusIcons.stimatrixGold.estimulaEvolucao }
+    ],
+    featured: true
+  },
+  {
+    slug: "aminobio",
+    name: "AMINOBIO",
+    area: "Agro",
+    logo: ASSETS.stimulusIcons.aminobio.logo,
+    description: "Nutrição com L-AMINOÁCIDOS hidrolisados e ÁCIDOS FÚLVICOS e HÚMICOS. \nSINERGIA com PLANTA e organismos MICROBIOLÓGICOS.",
+    features: [
+      { name: "BIO SINERGIA", icon: ASSETS.stimulusIcons.aminobio.bioSinergia },
+      { name: "ANTI ESTRESSE", icon: ASSETS.stimulusIcons.aminobio.antiEstresse },
+      { name: "DISTÚRBIO NUTRICIONAL", icon: ASSETS.stimulusIcons.aminobio.disturbioNutricional }
+    ]
+  },
+  {
+    slug: "nodusec",
+    name: "NODUSEC",
+    area: "Agro",
+    logo: ASSETS.stimulusIcons.nodusec.logo,
+    description: "ENRAIZADOR em pó com GRAFITE SECANTE e nutrients Ni+Co+Mo+Zn+B. \nTS BATELADA com mais ACABAMENTO e MENOS ÁGUA.",
+    features: [
+      { name: "BIO SINERGIA", icon: ASSETS.stimulusIcons.nodusec.bioSinergia },
+      { name: "MULTI MECANISMO DE AÇÃO", icon: ASSETS.stimulusIcons.nodusec.multiMecanismoAcao },
+      { name: "ESTIMULA EVOLUÇÃO", icon: ASSETS.stimulusIcons.nodusec.estimulaEvolucao },
+      { name: "MANEJO", icon: ASSETS.stimulusIcons.nodusec.manejo }
+    ]
+  }
+];

@@ -1,9 +1,9 @@
 import React from "react";
 import { BusinessAreaSection } from "../components/ui/BusinessAreaSection";
-import { SectionHeading } from "../components/ui/SectionHeading";
 import { BUSINESS_AREAS } from "../data/businessAreas";
-import { APLITEC_PRODUCTS } from "../data/products";
+import { APLITEC_PRODUCTS, STIMULUS_PRODUCTS } from "../data/products";
 import { AplitecSection } from "../components/ui/AplitecSection";
+import { StimulusSection } from "../components/ui/StimulusSection";
 import { CTASection } from "../components/ui/CTASection";
 import { ASSETS } from "../data/assetsMap";
 
@@ -47,8 +47,32 @@ export const BusinessAreas: React.FC = () => {
                 </div>
               </div>
 
-              <div className="container mx-auto px-4 lg:px-12">
+              <div className="container mx-auto px-4 lg:px-12 pb-16">
                 <AplitecSection products={APLITEC_PRODUCTS} />
+              </div>
+
+              {/* STIMULUS SECTION */}
+              <div className="w-full relative py-24 mb-16 overflow-hidden flex items-center justify-center border-t-4 border-novaag-red">
+                <div 
+                  className="absolute inset-0 z-0"
+                  style={{
+                    backgroundImage: `url(${ASSETS.images.stimulusBackground})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                />
+                <div className="absolute inset-0 bg-black/50 z-10" />
+                
+                <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center">
+                  <div className="text-novaag-red font-black text-xl tracking-[0.3em] mb-2">LINHA</div>
+                  <h2 className="text-5xl md:text-7xl font-black font-title text-white uppercase tracking-tight drop-shadow-lg">
+                    STIMULUS
+                  </h2>
+                </div>
+              </div>
+
+              <div className="container mx-auto px-4 lg:px-12">
+                <StimulusSection products={STIMULUS_PRODUCTS} />
               </div>
             </div>
           )}

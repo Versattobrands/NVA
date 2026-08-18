@@ -72,6 +72,29 @@ export const ASSETS = {
       antiEspuma: "/images/mataspuma/anti-espuma.png",
     }
   },
+  stimulusIcons: {
+    stimatrixGold: {
+      logo: "/images/stimatrix_gold/logo_stimatrix_gold.png",
+      antiEstresse: "/images/stimatrix_gold/anti_estresse.png",
+      bioSinergia: "/images/stimatrix_gold/bio_sinergia.png",
+      efeitoProtetor: "/images/stimatrix_gold/efeito_protetor.png",
+      estimulaEvolucao: "/images/stimatrix_gold/estimula_evolucao.png",
+      multiMecanismoAcao: "/images/stimatrix_gold/multi_mecanismo_acao.png",
+    },
+    aminobio: {
+      logo: "/images/aminobio/logo_aminobio.png",
+      antiEstresse: "/images/aminobio/anti_estresse.png",
+      bioSinergia: "/images/aminobio/bio_sinergia.png",
+      disturbioNutricional: "/images/aminobio/disturbio_nutricional.png",
+    },
+    nodusec: {
+      logo: "/images/nodusec/logo_nodusec.png",
+      bioSinergia: "/images/nodusec/bio_sinergia.png",
+      estimulaEvolucao: "/images/nodusec/estimula_evolucao.png",
+      manejo: "/images/nodusec/manejo.png",
+      multiMecanismoAcao: "/images/nodusec/multi_mecanismo_acao.png",
+    }
+  },
   logos: {
     principal: "/logo-principal.svg",
     negativo: "/logo-negativo.svg",
@@ -93,6 +116,7 @@ export const ASSETS = {
     aboutHero: "/images/background-conexao-nva.png",
     troppoilBackground: "/images/background-conexao1-nva.png",
     aplitecBackground: "/images/background-aplitec.jpg",
+    stimulusBackground: "/images/background-stimulus.jpg",
     troppoilSquare: "/images/quadro-troppoil.jpg",
     productsHero: "/images/products_hero.png",
     map: "/images/mapa-brasil.png",
