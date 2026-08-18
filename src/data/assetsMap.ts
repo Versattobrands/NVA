@@ -95,6 +95,56 @@ export const ASSETS = {
       multiMecanismoAcao: "/images/nodusec/multi_mecanismo_acao.png",
     }
   },
+  nutriprotectionIcons: {
+    honra: {
+      logo: "/images/honra/logo_honra.png",
+      efeitoProtetor: "/images/honra/efeito_protetor.png",
+      inducaoResistencia: "/images/honra/inducao_resitencia.png",
+      multiMecanismoAcao: "/images/honra/multi_mecanismo_de_acao.png",
+    },
+    forcaSanit: {
+      logo: "/images/forca_sanit/logo_forca_sant.png",
+      efeitoProtetor: "/images/forca_sanit/efeito_protetor.png",
+      multiMecanismoAcao: "/images/forca_sanit/muti_mecanismo_de_acao.png",
+    },
+    vipmax: {
+      logo: "/images/vipmax/logo_vipmax.png",
+      efeitoProtetor: "/images/vipmax/efeito_protetor.png",
+      emulsificante: "/images/vipmax/emulsificante_espalhante_adesivo.png",
+      phNeutro: "/images/vipmax/ph_neutro.png",
+      tankMix: "/images/vipmax/tank_mix_compativel.png",
+    },
+    aminoill: {
+      logo: "/images/aminoill/logo_aminoill.png",
+      antiDeriva: "/images/aminoill/anti_deriva.png",
+      antiEspuma: "/images/aminoill/anti_espuma.png",
+      antiEstresse: "/images/aminoill/anti_estress.png",
+      efeitoProtetor: "/images/aminoill/efeito_protetor.png",
+      emulsificante: "/images/aminoill/emulsificante_espalhante_adesivo.png",
+      redutorPh: "/images/aminoill/redutor_ph.png",
+      tankMix: "/images/aminoill/tank_mix_compativel.png",
+    },
+    essencial: {
+      logo: "/images/essencial/logo_essencial.png",
+      poderCitronela: "/images/essencial/poder_da_citronela.png",
+      poderAlho: "/images/essencial/poder_do_alho.png",
+      poderLimoneno: "/images/essencial/poder_do_limoeiro.png",
+    },
+    lemond: {
+      logo: "/images/lemond/logo_lemond.png",
+      poderLimoneno: "/images/lemond/poder_do_limoeiro.png",
+    },
+    shockSk31: {
+      logo: "/images/shock_sk31/logo_shock.png",
+      maturacao: "/images/shock_sk31/maturacao_enchimento_qualidade.png",
+      phNeutro: "/images/shock_sk31/ph_neutro.png",
+    },
+    suncal: {
+      logo: "/images/Suncal/logo_Suncal.png",
+      disturbioNutricional: "/images/Suncal/disturbio_nutricional.png",
+      efeitoProtetor: "/images/Suncal/efeito_protetor.png",
+    }
+  },
   logos: {
     principal: "/logo-principal.svg",
     negativo: "/logo-negativo.svg",
@@ -117,6 +167,7 @@ export const ASSETS = {
     troppoilBackground: "/images/background-conexao1-nva.png",
     aplitecBackground: "/images/background-aplitec.jpg",
     stimulusBackground: "/images/background-stimulus.jpg",
+    nutriprotectionBackground: "/images/background-nutriprotection.jpg",
     troppoilSquare: "/images/quadro-troppoil.jpg",
     productsHero: "/images/products_hero.png",
     map: "/images/mapa-brasil.png",

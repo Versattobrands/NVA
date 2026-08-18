@@ -402,3 +402,113 @@ export const STIMULUS_PRODUCTS: Product[] = [
     ]
   }
 ];
+
+export const NUTRIPROTECTION_PRODUCTS: Product[] = [
+  {
+    slug: "honra",
+    name: "HONRA",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.honra.logo,
+    description: "Inovador e exclusivo produto com múltiplos modos de ação que promovem nutrição, sanidade e resistência às plantas.",
+    features: [
+      { name: "MULTI MECANISMO DE AÇÃO", icon: ASSETS.nutriprotectionIcons.honra.multiMecanismoAcao },
+      { name: "INDUÇÃO RESISTÊNCIA", icon: ASSETS.nutriprotectionIcons.honra.inducaoResistencia },
+      { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.honra.efeitoProtetor }
+    ]
+  },
+  {
+    slug: "forca-sanit",
+    name: "FORÇA SANIT",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.forcaSanit.logo,
+    description: "OTIMIZAÇÃO de controle do MANEJO FITOSSANITÁRIO. MAIS FORÇA contra as doenças no MANEJO FITOSSANITÁRIO.",
+    features: [
+      { name: "MULTI MECANISMO DE AÇÃO", icon: ASSETS.nutriprotectionIcons.forcaSanit.multiMecanismoAcao },
+      { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.forcaSanit.efeitoProtetor },
+      { name: "DISPERSANTE", icon: ASSETS.aplitecIcons.sprayH.dispersante } // Using an existing dispersante icon as fallback if specific doesn't exist
+    ]
+  },
+  {
+    slug: "vipmax",
+    name: "VIPMAX",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.vipmax.logo,
+    description: "É um balanceado adjuvante agrícola que combina eletrólitos de dióxido de cloro e tensoativos surfactants que melhoram a qualidade da água e a qualidade físico-química das gotas durante a pulverização agrícola.",
+    features: [
+      { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.nutriprotectionIcons.vipmax.emulsificante },
+      { name: "pH NEUTRO", icon: ASSETS.nutriprotectionIcons.vipmax.phNeutro },
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.nutriprotectionIcons.vipmax.tankMix },
+      { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.vipmax.efeitoProtetor }
+    ]
+  },
+  {
+    slug: "aminoill",
+    name: "AMINOILL",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.aminoill.logo,
+    description: "Com HERBICIDAS, promove melhor ABSORÇÃO e NUTRIÇÃO. Tecnologia de AMINOÁCIDO+ÓLEO.",
+    features: [
+      { name: "REDUTOR pH", icon: ASSETS.nutriprotectionIcons.aminoill.redutorPh },
+      { name: "ANTI-ESPUMA", icon: ASSETS.nutriprotectionIcons.aminoill.antiEspuma },
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.nutriprotectionIcons.aminoill.tankMix },
+      { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.nutriprotectionIcons.aminoill.emulsificante },
+      { name: "ANTI-DERIVA", icon: ASSETS.nutriprotectionIcons.aminoill.antiDeriva },
+      { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.aminoill.efeitoProtetor },
+      { name: "ANTI-ESTRESSE", icon: ASSETS.nutriprotectionIcons.aminoill.antiEstresse }
+    ]
+  },
+  {
+    slug: "essencial",
+    name: "ESSENCIAL",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.essencial.logo,
+    description: "Combinação de óleos essenciais de citronella, alho e laranja em um inovador adjuvante que auxilia a absorção de defensivos e limpeza de tanque, peneiras e bicos.",
+    features: [
+      { name: "PODER DA CITRONELA", icon: ASSETS.nutriprotectionIcons.essencial.poderCitronela },
+      { name: "PODER DO D-LIMONENO", icon: ASSETS.nutriprotectionIcons.essencial.poderLimoneno },
+      { name: "PODER DO ALHO", icon: ASSETS.nutriprotectionIcons.essencial.poderAlho },
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.troppoil.tankMix }, // Using fallback if needed
+      { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.troppoil.emulsificante },
+      { name: "REPELÊNCIA", icon: ASSETS.icons.repelencia },
+      { name: "EFEITO TRANSLAMINAR", icon: ASSETS.icons.efeitoTranslaminar }
+    ]
+  },
+  {
+    slug: "lemond",
+    name: "LEMOND",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.lemond.logo,
+    description: "Combinação de óleos essenciais de citronella, alho e laranja em um inovador adjuvante que auxilia a absorção de defensivos e limpeza de tanque, peneiras e bicos.",
+    features: [
+      { name: "PODER DO D-LIMONENO", icon: ASSETS.nutriprotectionIcons.lemond.poderLimoneno },
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.troppoil.tankMix },
+      { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.troppoil.emulsificante },
+      { name: "REPELÊNCIA", icon: ASSETS.icons.repelencia },
+      { name: "EFEITO TRANSLAMINAR", icon: ASSETS.icons.efeitoTranslaminar }
+    ]
+  },
+  {
+    slug: "shock-sk31",
+    name: "SHOCK SK31",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.shockSk31.logo,
+    description: "ENXOFRE SOLÚVEL SUPER CONCENTRADO para NUTRIR e sinalizar quimicamente = DESALOJANTE",
+    features: [
+      { name: "MATURAÇÃO ENCHIMENTO QUALIDADE", icon: ASSETS.nutriprotectionIcons.shockSk31.maturacao },
+      { name: "pH NEUTRO", icon: ASSETS.nutriprotectionIcons.shockSk31.phNeutro },
+      { name: "REPELÊNCIA", icon: ASSETS.icons.repelencia }
+    ]
+  },
+  {
+    slug: "suncal",
+    name: "SUNCAL",
+    area: "Agro",
+    logo: ASSETS.nutriprotectionIcons.suncal.logo,
+    description: "NANO PARTÍCULAS para a NUTRIÇÃO & PROTEÇÃO SOLAR",
+    features: [
+      { name: "DISTÚRBIO NUTRICIONAL", icon: ASSETS.nutriprotectionIcons.suncal.disturbioNutricional },
+      { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.suncal.efeitoProtetor },
+      { name: "ANTI-ESTRESSE", icon: ASSETS.stimulusIcons.stimatrixGold.antiEstresse } // fallback
+    ]
+  }
+];
