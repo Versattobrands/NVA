@@ -11,26 +11,26 @@ interface AplitecFeatureProps {
 
 const AplitecFeature: React.FC<AplitecFeatureProps> = ({ name, icon, darkText = false, iconOnly = false }) => {
   if (iconOnly) {
+    // Só o ícone, sem texto — o nome já está dentro da imagem PNG
     return (
-      <div className="flex flex-col items-center gap-2">
-        <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-2 shadow-lg">
-          {icon ? (
-            <img src={icon} alt={name} className="w-full h-full object-contain" />
-          ) : (
-            <div className="w-3 h-3 rounded-full bg-novaag-red" />
-          )}
-        </div>
+      <div className="flex items-center justify-center">
+        {icon ? (
+          <img src={icon} alt={name} className="h-20 w-auto object-contain drop-shadow-lg" />
+        ) : (
+          <div className="w-16 h-16 rounded-full bg-white/20 border-2 border-white" />
+        )}
       </div>
     );
   }
 
+  // Ícone direto (sem círculo) + texto à direita + linha embaixo
   return (
     <div className="flex items-center gap-3">
-      <div className="flex-shrink-0 w-14 h-14 bg-white rounded-full flex items-center justify-center p-2 shadow-sm">
+      <div className="flex-shrink-0">
         {icon ? (
-          <img src={icon} alt={name} className="w-full h-full object-contain" />
+          <img src={icon} alt={name} className="h-14 w-auto object-contain drop-shadow-md" />
         ) : (
-          <div className="w-2 h-2 rounded-full bg-novaag-red" />
+          <div className="w-10 h-10 rounded-full bg-white/20 border-2 border-white" />
         )}
       </div>
       <div className="flex-1 border-b-[3px] border-white pb-1">
