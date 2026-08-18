@@ -12,11 +12,13 @@ export const Troppoil: React.FC = () => {
     <div className="flex flex-col w-full bg-novaag-black text-white">
       {/* HERO SECTION */}
       <section className="relative overflow-hidden min-h-[80vh] flex flex-col md:flex-row bg-[#2c3d31]">
-        <div className="absolute top-0 right-0 w-full md:w-1/2 h-full z-0">
-          <img src="/images/background-troppoil.png" alt="Tractor" className="w-full h-full object-cover object-left" />
+        <div className="absolute inset-0 z-0">
+          <img src="/images/background-troppoil.png" alt="Troppoil Background" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2c3d31]/95 via-[#2c3d31]/80 to-transparent"></div>
         </div>
         
         <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center h-full pt-32 pb-24 md:py-32">
+          {/* Esquerda: Conteúdo */}
           <div className="w-full md:w-1/2 flex flex-col justify-center mb-12 md:mb-0 md:pr-12">
             <span className="text-novaag-gold font-bold tracking-widest uppercase mb-4 text-xs md:text-sm">
               Linha Agro
@@ -34,7 +36,11 @@ export const Troppoil: React.FC = () => {
               </Button>
             </div>
           </div>
-          <div className="w-full md:w-1/2 hidden md:block min-h-[300px]"></div>
+
+          {/* Direita: Imagem do Produto */}
+          <div className="w-full md:w-1/2 flex items-center justify-center min-h-[300px]">
+            <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Produto Troppoil" className="w-full max-w-[400px] h-auto object-contain drop-shadow-2xl" />
+          </div>
         </div>
       </section>
 
@@ -49,11 +55,8 @@ export const Troppoil: React.FC = () => {
           </div>
           
           {troppoil?.features && (
-            <div className="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
-              <div className="w-full lg:w-1/2 flex justify-center">
-                <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Troppoil" className="w-full max-w-[500px] drop-shadow-2xl object-contain" />
-              </div>
-              <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="flex flex-col items-center max-w-5xl mx-auto">
+              <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {troppoil.features.map((feature, idx) => (
                   <div key={idx} className="bg-novaag-black p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-novaag-green transition-colors duration-300">
                     {feature.icon ? (
