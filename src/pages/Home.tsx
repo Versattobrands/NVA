@@ -180,18 +180,34 @@ export const Home: React.FC = () => {
             <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Troppoil" className="w-full max-w-[500px] h-auto object-contain drop-shadow-2xl scale-110" />
           </div>
           <div className="w-full md:w-1/2 md:pl-12">
-            <h2 className="text-5xl md:text-7xl font-product text-novaag-gold mb-6">
-              {SITE_CONTENT.home.troppoil.title}
-            </h2>
+            <div className="mb-6">
+              <img 
+                src={ASSETS.aplitecIcons.troppoil.logo} 
+                alt="Troppoil Logo" 
+                className="h-16 md:h-20 w-auto object-contain"
+              />
+            </div>
             <p className="text-xl text-white/90 mb-10 leading-relaxed">
               {SITE_CONTENT.home.troppoil.text}
             </p>
-            <ul className="grid grid-cols-2 gap-4 mb-10 text-white font-bold">
-              <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-novaag-gold"/> Emulsificante</li>
-              <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-novaag-gold"/> Espalhante</li>
-              <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-novaag-gold"/> Adesivo</li>
-              <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-novaag-gold"/> Anti-deriva</li>
-            </ul>
+            <div className="grid grid-cols-2 gap-4 mb-10">
+              <div className="flex items-center gap-3">
+                <img src={ASSETS.aplitecIcons.troppoil.emulsificante} alt="Emulsificante, Espalhante, Adesivo" className="w-8 h-8 object-contain" />
+                <span className="text-white font-bold text-sm">Emulsificante</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <img src={ASSETS.aplitecIcons.troppoil.emulsificante} alt="Emulsificante, Espalhante, Adesivo" className="w-8 h-8 object-contain" />
+                <span className="text-white font-bold text-sm">Espalhante</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <img src={ASSETS.aplitecIcons.troppoil.emulsificante} alt="Emulsificante, Espalhante, Adesivo" className="w-8 h-8 object-contain" />
+                <span className="text-white font-bold text-sm">Adesivo</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <img src={ASSETS.aplitecIcons.troppoil.antiDeriva} alt="Anti-deriva" className="w-8 h-8 object-contain" />
+                <span className="text-white font-bold text-sm">Anti-deriva</span>
+              </div>
+            </div>
             <Button asChild size="lg" variant="primary">
               <Link to="/troppoil">Conheça o Troppoil</Link>
             </Button>
