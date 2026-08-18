@@ -96,10 +96,14 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
               
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-10">
                 <div className="flex-shrink-0">
-                  <div className="text-novaag-red font-black text-lg tracking-widest mb-1 flex items-center gap-2">
-                    NVA
-                  </div>
-                  <h3 className="text-4xl font-black font-title text-white uppercase tracking-tight">{product.name}</h3>
+                  {product.logo ? (
+                    <img src={product.logo} alt={product.name} className="h-14 w-auto object-contain" />
+                  ) : (
+                    <>
+                      <div className="text-novaag-red font-black text-lg tracking-widest mb-1">NVA</div>
+                      <h3 className="text-4xl font-black font-title text-white uppercase tracking-tight">{product.name}</h3>
+                    </>
+                  )}
                 </div>
                 {product.description && (
                   <p className="text-white/90 text-sm md:text-right max-w-[280px] leading-relaxed font-medium">

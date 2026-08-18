@@ -17,6 +17,7 @@ export type Product = {
   area: "Agro";
   description: string;
   subtitle?: string;
+  logo?: string;
   infoBlocks?: InfoBlock[];
   features: ProductFeature[];
   image?: string;
@@ -26,19 +27,19 @@ export type Product = {
   notes?: string;
 };
 
-export const APLITEC_PRODUCTS: Product[] = [
   {
     slug: "troppoil",
     name: "TROPPOIL",
     area: "Agro",
     subtitle: "Origem MINERAL com aditivos VEGETAIS",
+    logo: ASSETS.aplitecIcons.troppoil.logo,
     description: "Adjuvante de origem mineral com aditivos vegetais, desenvolvido para diferentes aspectos da aplicação agrícola.",
     image: ASSETS.images.troppoilSquare,
     features: [
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.troppoil.tankMix },
       { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.troppoil.emulsificante },
       { name: "ANTI-DERIVA", icon: ASSETS.aplitecIcons.troppoil.antiDeriva },
-      { name: "DISPERSANTE", icon: ASSETS.icons.dispersante } // Fallback to main icons if non-specific exists
+      { name: "DISPERSANTE", icon: ASSETS.icons.dispersante }
     ],
     featured: true
   },
@@ -46,6 +47,7 @@ export const APLITEC_PRODUCTS: Product[] = [
     slug: "spray-h",
     name: "SPRAY H",
     area: "Agro",
+    logo: ASSETS.aplitecIcons.sprayH.logo,
     description: "Adjuvante multifuncional para herbicidas; Use 50-100ml/ha primeiro na calda.",
     features: [
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.sprayH.tankMix },
@@ -60,6 +62,7 @@ export const APLITEC_PRODUCTS: Product[] = [
     slug: "spray-if",
     name: "SPRAY IF",
     area: "Agro",
+    logo: ASSETS.aplitecIcons.sprayIf.logo,
     description: "Adjuvante multifuncional para inseticidas e fungicidas; use 50-100ml/ha primeiro na calda.",
     features: [
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.sprayIf.tankMix },
@@ -73,6 +76,7 @@ export const APLITEC_PRODUCTS: Product[] = [
     slug: "detex",
     name: "DETEX",
     area: "Agro",
+    logo: ASSETS.aplitecIcons.detex.logo,
     description: "Emulsificação de óleos vegetais brutos e degomados.",
     features: [
       { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.detex.emulsificante },
@@ -83,6 +87,7 @@ export const APLITEC_PRODUCTS: Product[] = [
     slug: "dsolv-protax",
     name: "DSOLV + PROTAX",
     area: "Agro",
+    logo: ASSETS.aplitecIcons.dsolv.logo,
     description: "Compatibiliza misturas complexas de glifosato e outros defensivos com fertilizantes.",
     features: [
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.dsolv.tankMix }
@@ -92,6 +97,7 @@ export const APLITEC_PRODUCTS: Product[] = [
     slug: "dsolv-m",
     name: "DSOLV + M",
     area: "Agro",
+    logo: ASSETS.aplitecIcons.dsolvM.logo,
     description: "Compatibiliza misturas complexas de defensivos EC / Óleos / MANCOZEB.",
     features: [
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.dsolvM.tankMix }
@@ -101,6 +107,7 @@ export const APLITEC_PRODUCTS: Product[] = [
     slug: "mataspuma",
     name: "MATASPUMA",
     area: "Agro",
+    logo: ASSETS.aplitecIcons.mataspuma.logo,
     description: "Elimina a espuma indesejada.",
     features: [
       { name: "ANTI-ESPUMA", icon: ASSETS.aplitecIcons.mataspuma.antiEspuma }

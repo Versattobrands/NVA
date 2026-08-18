@@ -38,6 +38,7 @@ export const ASSETS = {
       antiDeriva: "/images/troppoil/anti-deriva.png",
     },
     sprayH: {
+      logo: "/images/spray h/logo spray h.png",
       tankMix: "/images/spray h/tank mix compativel.png",
       emulsificante: "/images/spray h/emulsificante espalhante adesivo.png",
       dispersante: "/images/spray h/dispersante.png",
@@ -46,6 +47,7 @@ export const ASSETS = {
       redutorPh: "/images/spray h/redutor de ph.png",
     },
     sprayIf: {
+      logo: "/images/spray if/logo spray if.png",
       tankMix: "/images/spray if/tank mix compativel.png",
       emulsificante: "/images/spray if/emulsificante espalhante adesivo.png",
       dispersante: "/images/spray if/dispersante.png",
@@ -53,16 +55,20 @@ export const ASSETS = {
       antiEspuma: "/images/spray if/anti-espuma.png",
     },
     detex: {
+      logo: "/images/Detex/logo detex.png",
       emulsificante: "/images/Detex/emulsificante espalhante adesivo.png",
       dispersante: "/images/Detex/dispersante.png",
     },
     dsolv: {
+      logo: "/images/Dsolv/logo dsolv + protax.png",
       tankMix: "/images/Dsolv/tank mix compativel.png",
     },
     dsolvM: {
+      logo: "/images/Dsolv +M/logo dsolv M.png",
       tankMix: "/images/Dsolv +M/tank mix compativel.png",
     },
     mataspuma: {
+      logo: "/images/mataspuma/logo mataspuma.png",
       antiEspuma: "/images/mataspuma/anti-espuma.png",
     }
   },
