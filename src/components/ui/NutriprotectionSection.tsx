@@ -114,6 +114,7 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
               backgroundPosition: 'center',
             }}
           />
+          <div className="absolute inset-0 bg-black/60 z-0" />
           
           <div className="relative z-10 w-full p-8 md:p-12 flex flex-col justify-center items-center text-center">
             {forcaSanit.logo && (
