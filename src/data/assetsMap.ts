@@ -60,12 +60,12 @@ export const ASSETS = {
       dispersante: "/images/Detex/dispersante.png",
     },
     dsolv: {
-      logo: "/images/Dsolv/logo dsolv + protax.png",
+      logo: "/images/Dsolv/logo_dsolv_protax.png",
       tankMix: "/images/Dsolv/tank mix compativel.png",
     },
     dsolvM: {
-      logo: "/images/Dsolv +M/logo dsolv M.png",
-      tankMix: "/images/Dsolv +M/tank mix compativel.png",
+      logo: "/images/Dsolv_M/logo dsolv M.png",
+      tankMix: "/images/Dsolv_M/tank mix compativel.png",
     },
     mataspuma: {
       logo: "/images/mataspuma/logo mataspuma.png",
