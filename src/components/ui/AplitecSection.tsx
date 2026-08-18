@@ -78,7 +78,7 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
             <img
               src={ASSETS.aplitecIcons.troppoil.logo}
               alt="Troppoil"
-              className="h-16 md:h-24 w-auto object-contain mb-6 drop-shadow-lg"
+              className="h-24 md:h-32 w-auto object-contain mb-6 drop-shadow-lg"
             />
 
             <p className="text-white text-lg font-medium leading-relaxed mb-8">
@@ -87,7 +87,7 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
             
             <div className="flex flex-row flex-wrap gap-x-8 gap-y-6 mb-10">
               {troppoil.features.map((feat, idx) => (
-                <AplitecFeature key={idx} name={feat.name} icon={feat.icon} />
+                <AplitecFeature key={idx} name={feat.name} icon={feat.icon} iconOnly />
               ))}
             </div>
 
