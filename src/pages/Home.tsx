@@ -201,7 +201,7 @@ export const Home: React.FC = () => {
         </div>
         <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-12 md:mb-0 flex justify-center">
-            <img src={ASSETS.images.troppoilSquare} alt="Troppoil" className="w-full aspect-[4/3] object-cover rounded-2xl shadow-2xl drop-shadow-2xl" />
+            <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Troppoil" className="w-full max-w-[500px] h-auto object-contain drop-shadow-2xl scale-110" />
           </div>
           <div className="w-full md:w-1/2 md:pl-12">
             <h2 className="text-5xl md:text-7xl font-product text-novaag-gold mb-6">
