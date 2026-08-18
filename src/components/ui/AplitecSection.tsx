@@ -70,11 +70,8 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
               alt="Troppoil"
               className="h-24 md:h-36 w-auto object-contain mb-6 drop-shadow-lg"
             />
-            {troppoil.subtitle && (
-              <p className="text-xl md:text-3xl font-light tracking-wide mb-12 border-b-2 border-white/40 pb-4 inline-block w-fit">
-                {troppoil.subtitle}
-              </p>
-            )}
+
+
             
             <div className="flex flex-row flex-wrap gap-8 mt-4">
               {troppoil.features.map((feat, idx) => (
