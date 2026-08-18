@@ -27,8 +27,10 @@ export type Product = {
   notes?: string;
 };
 
+export const APLITEC_PRODUCTS: Product[] = [
   {
     slug: "troppoil",
+
     name: "TROPPOIL",
     area: "Agro",
     subtitle: "Origem MINERAL com aditivos VEGETAIS",
