@@ -11,35 +11,30 @@ export const Troppoil: React.FC = () => {
   return (
     <div className="flex flex-col w-full bg-novaag-black text-white">
       {/* HERO SECTION */}
-      <section className="relative pt-32 pb-24 overflow-hidden min-h-[80vh] flex items-center bg-novaag-green">
-        <div className="absolute top-0 right-0 w-full md:w-2/3 h-full opacity-20 pointer-events-none">
-          <img src={ASSETS.products.troppoil} alt="" className="w-full h-full object-cover md:object-contain object-right filter grayscale" />
+      <section className="relative overflow-hidden min-h-[80vh] flex flex-col md:flex-row bg-[#2c3d31]">
+        <div className="absolute top-0 right-0 w-full md:w-1/2 h-full z-0">
+          <img src="/images/background-troppoil.png" alt="Tractor" className="w-full h-full object-cover object-left" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-novaag-green via-novaag-green/90 to-transparent"></div>
         
-        <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-1/2 flex flex-col justify-center mb-12 md:mb-0">
-            <span className="text-novaag-gold font-bold tracking-widest uppercase mb-4 text-sm">
+        <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center h-full pt-32 pb-24 md:py-32">
+          <div className="w-full md:w-1/2 flex flex-col justify-center mb-12 md:mb-0 md:pr-12">
+            <span className="text-novaag-gold font-bold tracking-widest uppercase mb-4 text-xs md:text-sm">
               Linha Agro
             </span>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-product text-white mb-6">
-              Troppoil
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-10 max-w-xl">
+            <img src={ASSETS.aplitecIcons.troppoil.logo} alt="Troppoil" className="w-full max-w-[300px] mb-6 drop-shadow-lg" />
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 max-w-xl">
               Uma solução de origem mineral com aditivos vegetais para diferentes aspectos da aplicação agrícola.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="accent" className="font-bold">
+              <Button asChild size="lg" variant="accent" className="font-bold whitespace-nowrap">
                 <Link to="/contato">Fale com um especialista</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-bold">
+              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-bold whitespace-nowrap">
                 <a href="#ficha-tecnica">Solicite a ficha técnica</a>
               </Button>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center items-center">
-            <img src={ASSETS.products.troppoil} alt="Troppoil" className="max-h-[600px] object-contain drop-shadow-2xl" />
-          </div>
+          <div className="w-full md:w-1/2 hidden md:block min-h-[300px]"></div>
         </div>
       </section>
 
@@ -54,21 +49,26 @@ export const Troppoil: React.FC = () => {
           </div>
           
           {troppoil?.features && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {troppoil.features.map((feature, idx) => (
-                <div key={idx} className="bg-novaag-black p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-novaag-green transition-colors duration-300">
-                  {feature.icon ? (
-                    <div className="w-20 h-20 mb-6 bg-white/10 rounded-full flex items-center justify-center p-4">
-                      <img src={feature.icon} alt={feature.name} className="w-full h-full object-contain filter brightness-0 invert" />
-                    </div>
-                  ) : (
-                    <div className="w-20 h-20 mb-6 bg-novaag-gold/20 rounded-full flex items-center justify-center">
-                      <div className="w-4 h-4 bg-novaag-gold rounded-full" />
-                    </div>
-                  )}
-                  <h3 className="text-xl font-bold text-white uppercase tracking-wider">{feature.name}</h3>
-                </div>
-              ))}
+            <div className="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
+              <div className="w-full lg:w-1/2 flex justify-center">
+                <img src={ASSETS.aplitecIcons.troppoil.produto} alt="Troppoil" className="w-full max-w-[500px] drop-shadow-2xl object-contain" />
+              </div>
+              <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {troppoil.features.map((feature, idx) => (
+                  <div key={idx} className="bg-novaag-black p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-novaag-green transition-colors duration-300">
+                    {feature.icon ? (
+                      <div className="w-20 h-20 mb-6 bg-white/10 rounded-full flex items-center justify-center p-4">
+                        <img src={feature.icon} alt={feature.name} className="w-full h-full object-contain filter brightness-0 invert" />
+                      </div>
+                    ) : (
+                      <div className="w-20 h-20 mb-6 bg-novaag-gold/20 rounded-full flex items-center justify-center">
+                        <div className="w-4 h-4 bg-novaag-gold rounded-full" />
+                      </div>
+                    )}
+                    <h3 className="text-lg font-bold text-white uppercase tracking-wider">{feature.name}</h3>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>

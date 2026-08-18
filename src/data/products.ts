@@ -41,7 +41,7 @@ export const APLITEC_PRODUCTS: Product[] = [
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.troppoil.tankMix },
       { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.troppoil.emulsificante },
       { name: "ANTI-DERIVA", icon: ASSETS.aplitecIcons.troppoil.antiDeriva },
-      { name: "DISPERSANTE", icon: ASSETS.icons.dispersante }
+      { name: "DISPERSANTE", icon: ASSETS.aplitecIcons.troppoil.dispersante }
     ],
     featured: true
   },

@@ -31,11 +31,12 @@ export const ASSETS = {
   },
   aplitecIcons: {
     troppoil: {
-      logo: "/images/troppoil/logo troppoil.png",
+      logo: "/images/troppoil/logo_troppoil.png",
       produto: "/images/troppoil/produto-troppoil.png",
-      tankMix: "/images/troppoil/tank mix.png",
-      emulsificante: "/images/troppoil/emulsificante espalhe adesivo.png",
+      tankMix: "/images/troppoil/tank_mix.png",
+      emulsificante: "/images/troppoil/emulsificante_espalhe_adesivo.png",
       antiDeriva: "/images/troppoil/anti-deriva.png",
+      dispersante: "/images/troppoil/dispersante.png",
     },
     sprayH: {
       logo: "/images/spray h/logo spray h.png",
