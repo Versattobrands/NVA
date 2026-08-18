@@ -191,7 +191,7 @@ export const ASSETS = {
   images: {
     hero: "/images/background-hero-nva.png",
     aboutHero: "/images/background-conexao-nva.png",
-    troppoilBackground: "/images/background-conexao1-nva.png",
+    comexBackground: "/images/background-conexao1-nva.png",
     aplitecBackground: "/images/background-aplitec.jpg",
     stimulusBackground: "/images/background-stimulus.jpg",
     nutriprotectionBackground: "/images/background-nutriprotection.jpg",

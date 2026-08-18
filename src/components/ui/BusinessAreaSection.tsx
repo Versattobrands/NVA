@@ -5,6 +5,8 @@ import { type BusinessArea } from "../../data/businessAreas";
 import { SectionHeading } from "./SectionHeading";
 import { Button } from "./Button";
 
+import { ASSETS } from "../../data/assetsMap";
+
 interface BusinessAreaSectionProps {
   area: BusinessArea;
   index: number;
@@ -15,6 +17,18 @@ export const BusinessAreaSection: React.FC<BusinessAreaSectionProps> = ({ area, 
 
   return (
     <section className="py-24 relative overflow-hidden">
+      {/* Background for COMEX */}
+      {area.id === "comex" && (
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${ASSETS.images.comexBackground})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+      )}
+      
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className={cn(
           "flex flex-col gap-12 lg:gap-20 items-center",
