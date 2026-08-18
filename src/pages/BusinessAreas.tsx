@@ -29,15 +29,24 @@ export const BusinessAreas: React.FC = () => {
           {/* Produtos Agro */}
           {agroArea.products && agroArea.products.length > 0 && (
             <div id="produtos" className="bg-[#1A251E] py-24 border-t border-white/5">
-              <div className="container mx-auto px-4 md:px-6 mb-16">
-                <SectionHeading 
-                  title="Aplitec" 
-                  subtitle="Sub-linha" 
-                  dark 
-                  align="center"
+              <div className="w-full relative py-24 mb-16 overflow-hidden flex items-center justify-center">
+                <div 
+                  className="absolute inset-0 z-0"
+                  style={{
+                    backgroundImage: `url(${ASSETS.images.aplitecBackground})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
                 />
+                <div className="absolute inset-0 bg-black/60 z-10" />
+                
+                <div className="relative z-20 container mx-auto px-4 text-center">
+                  <h2 className="text-5xl md:text-7xl font-black font-title text-white uppercase tracking-tight">
+                    APLITEC
+                  </h2>
+                </div>
               </div>
-              
+
               <div className="container mx-auto px-4 lg:px-12">
                 <AplitecSection products={APLITEC_PRODUCTS} />
               </div>

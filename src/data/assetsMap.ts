@@ -92,6 +92,7 @@ export const ASSETS = {
     hero: "/images/background-hero-nva.png",
     aboutHero: "/images/background-conexao-nva.png",
     troppoilBackground: "/images/background-conexao1-nva.png",
+    aplitecBackground: "/images/background-aplitec.jpg",
     troppoilSquare: "/images/quadro-troppoil.jpg",
     productsHero: "/images/products_hero.png",
     map: "/images/mapa-brasil.png",
