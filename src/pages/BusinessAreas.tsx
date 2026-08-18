@@ -1,6 +1,5 @@
 import React from "react";
 import { BusinessAreaSection } from "../components/ui/BusinessAreaSection";
-import { ProductRow } from "../components/ui/ProductRow";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { BUSINESS_AREAS } from "../data/businessAreas";
 import { APLITEC_PRODUCTS } from "../data/products";
