@@ -97,7 +97,7 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-10">
                 <div className="flex-shrink-0">
                   {product.logo ? (
-                    <img src={product.logo} alt={product.name} className="h-14 w-auto object-contain" />
+                    <img src={product.logo} alt={product.name} className="h-20 md:h-24 w-auto object-contain drop-shadow-md" />
                   ) : (
                     <>
                       <div className="text-novaag-red font-black text-lg tracking-widest mb-1">NVA</div>
@@ -112,9 +112,9 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
                 )}
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mt-auto pt-8 border-t border-white/5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8 mt-auto pt-8 border-t border-white/5">
                 {product.features.map((feat, idx) => (
-                  <AplitecFeature key={idx} name={feat.name} icon={feat.icon} />
+                  <AplitecFeature key={idx} name={feat.name} icon={feat.icon} iconOnly />
                 ))}
               </div>
               
