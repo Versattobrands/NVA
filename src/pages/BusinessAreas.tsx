@@ -32,8 +32,8 @@ export const BusinessAreas: React.FC = () => {
         <div className="absolute inset-0 bg-novaag-black/80 z-10" />
         
         <div className="relative z-20 container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black font-title text-white uppercase tracking-tight drop-shadow-2xl">
-            NOSSAS <span className="text-novaag-red block mt-2">SOLUÇÕES</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black italic font-title text-white uppercase tracking-tight drop-shadow-2xl">
+            NOSSAS <span className="block mt-2 text-[#FF1A1A]">SOLUÇÕES</span>
           </h1>
         </div>
       </div>
