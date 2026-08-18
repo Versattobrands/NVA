@@ -31,6 +31,7 @@ export const ASSETS = {
   },
   aplitecIcons: {
     troppoil: {
+      logo: "/images/troppoil/logo troppoil.png",
       tankMix: "/images/troppoil/tank mix.png",
       emulsificante: "/images/troppoil/emulsificante espalhe adesivo.png",
       antiDeriva: "/images/troppoil/anti-deriva.png",

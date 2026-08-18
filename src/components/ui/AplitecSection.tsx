@@ -1,6 +1,7 @@
 import React from "react";
 import { type Product } from "../../data/products";
 import { cn } from "../../lib/utils";
+import { ASSETS } from "../../data/assetsMap";
 
 interface AplitecFeatureProps {
   name: string;
@@ -64,12 +65,11 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
           
           {/* Conteúdo */}
           <div className="relative z-10 w-full md:w-3/5 p-8 md:p-16 flex flex-col justify-center">
-            <div className="text-novaag-red font-bold text-2xl mb-1 tracking-widest uppercase flex items-center gap-2">
-              <span>NVA</span>
-            </div>
-            <h2 className="text-7xl md:text-9xl font-black font-title uppercase tracking-tighter mb-2 leading-none">
-              {troppoil.name}
-            </h2>
+            <img
+              src={ASSETS.aplitecIcons.troppoil.logo}
+              alt="Troppoil"
+              className="h-24 md:h-36 w-auto object-contain mb-6 drop-shadow-lg"
+            />
             {troppoil.subtitle && (
               <p className="text-xl md:text-3xl font-light tracking-wide mb-12 border-b-2 border-white/40 pb-4 inline-block w-fit">
                 {troppoil.subtitle}
