@@ -68,11 +68,8 @@ export const AplitecSection: React.FC<AplitecSectionProps> = ({ products }) => {
             </div>
           </div>
           
-          {/* Imagem folha */}
-          <div className="relative z-10 w-full md:w-2/5 p-8 flex items-center justify-center min-h-[400px]">
-             <div className="w-full aspect-[4/3] md:aspect-auto md:h-[90%] rounded-tl-[100px] rounded-br-[100px] overflow-hidden border-[12px] border-white shadow-[0_0_40px_rgba(0,0,0,0.5)] bg-white relative">
-                <img src={troppoil.image} alt="Troppoil" className="w-full h-full object-cover" />
-             </div>
+          <div className="relative z-10 w-full md:w-2/5 flex items-center justify-center min-h-[400px] overflow-hidden">
+             <img src={troppoil.image} alt="Troppoil" className="w-full h-full object-cover" />
           </div>
           
           <div className="absolute bottom-0 left-0 w-full h-8 bg-novaag-red transform -skew-x-[20deg] origin-left z-20 translate-y-1/2 scale-110"></div>
