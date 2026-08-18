@@ -58,17 +58,14 @@ export const Troppoil: React.FC = () => {
             <div className="flex flex-col items-center max-w-5xl mx-auto">
               <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {troppoil.features.map((feature, idx) => (
-                  <div key={idx} className="bg-novaag-black p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-novaag-green transition-colors duration-300">
+                  <div key={idx} className="bg-novaag-green p-8 rounded-2xl flex flex-col items-center justify-center text-center group hover:bg-novaag-black transition-colors duration-300 min-h-[160px]">
                     {feature.icon ? (
-                      <div className="w-20 h-20 mb-6 bg-white/10 rounded-full flex items-center justify-center p-4">
-                        <img src={feature.icon} alt={feature.name} className="w-full h-full object-contain filter brightness-0 invert" />
-                      </div>
+                      <img src={feature.icon} alt={feature.name} className="w-full h-auto max-h-[100px] object-contain drop-shadow-lg" />
                     ) : (
-                      <div className="w-20 h-20 mb-6 bg-novaag-gold/20 rounded-full flex items-center justify-center">
-                        <div className="w-4 h-4 bg-novaag-gold rounded-full" />
+                      <div className="w-12 h-12 bg-novaag-gold/20 rounded-full flex items-center justify-center">
+                        <div className="w-3 h-3 bg-novaag-gold rounded-full" />
                       </div>
                     )}
-                    <h3 className="text-lg font-bold text-white uppercase tracking-wider">{feature.name}</h3>
                   </div>
                 ))}
               </div>
