@@ -31,9 +31,16 @@ export const StimulusSection: React.FC<StimulusSectionProps> = ({ products }) =>
       
       {/* STIMATRIX GOLD HERO */}
       {stimatrixGold && (
-        <div className="relative w-full rounded-[2rem] overflow-hidden bg-[#1f1a18] text-white shadow-2xl border-t-8 border-novaag-red flex flex-col pb-6 md:pb-12">
-          {/* Fundo escuro e opaco como na imagem */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#110f0e] to-[#211a17] z-0" />
+        <div className="relative w-full rounded-[2rem] overflow-hidden text-white shadow-2xl flex flex-col pb-6 md:pb-12">
+          {/* Fundo de imagem cobrindo todo o bloco */}
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'url("/images/background-stimatrix.png")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
           
           <div className="relative z-10 w-full p-8 md:p-12 lg:p-16 flex flex-col">
             {/* Logo */}
