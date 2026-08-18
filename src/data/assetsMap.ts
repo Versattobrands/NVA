@@ -206,7 +206,7 @@ export const ASSETS = {
     field2: "/img-field-2.jpg",
     field3: "/img-field-3.jpg",
     field4: "/img-field-4.jpeg",
-    industry: "/img-industry.jpg",
+    industry: "/images/industrial.png",
     soy: "/img-soy.jpeg",
   }
 };

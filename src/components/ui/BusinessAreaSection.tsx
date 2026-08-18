@@ -28,6 +28,18 @@ export const BusinessAreaSection: React.FC<BusinessAreaSectionProps> = ({ area, 
           }}
         />
       )}
+
+      {/* Background for INDUSTRIAL */}
+      {area.id === "industrial" && (
+        <div 
+          className="absolute inset-0 z-0 opacity-20"
+          style={{
+            backgroundImage: `url(${ASSETS.images.productsHero})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+      )}
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className={cn(
@@ -42,6 +54,12 @@ export const BusinessAreaSection: React.FC<BusinessAreaSectionProps> = ({ area, 
                 src={area.image} 
                 alt={area.name} 
                 className="w-full max-w-lg object-contain filter hover:brightness-110 transition-all duration-700 hover:-translate-y-2"
+              />
+            ) : area.id === "industrial" ? (
+              <img 
+                src={area.image} 
+                alt={area.name} 
+                className="w-full max-w-xl object-cover rounded-2xl shadow-2xl transition-all duration-700 hover:scale-105"
               />
             ) : (
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl w-full">
