@@ -45,28 +45,28 @@ export const Troppoil: React.FC = () => {
       </section>
 
       {/* CARACTERÍSTICAS */}
-      <section className="py-24 bg-white text-novaag-black border-t-8 border-novaag-gold">
+      {/* CARACTERÍSTICAS */}
+      <section className="py-24 bg-novaag-green text-white border-t-8 border-novaag-gold">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-title font-bold mb-6">Múltiplas Soluções</h2>
-            <p className="text-xl text-novaag-black/70">
+            <h2 className="text-4xl md:text-5xl font-title font-bold mb-6 text-novaag-gold">Múltiplas Soluções</h2>
+            <p className="text-xl text-white/80">
               Desenvolvido para atender aos principais desafios da tecnologia de aplicação.
             </p>
           </div>
           
           {troppoil?.features && (
-            <div className="flex flex-col items-center max-w-5xl mx-auto">
-              <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="flex flex-col items-center max-w-4xl mx-auto">
+              <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-12">
                 {troppoil.features.map((feature, idx) => (
-                  <div key={idx} className="bg-novaag-green p-8 rounded-2xl flex flex-col items-center justify-center text-center group hover:bg-novaag-black transition-colors duration-300 min-h-[200px]">
-                    {feature.icon ? (
-                      <img src={feature.icon} alt={feature.name} className="w-full h-auto max-h-[80px] object-contain drop-shadow-lg mb-6" />
-                    ) : (
-                      <div className="w-12 h-12 bg-novaag-gold/20 rounded-full flex items-center justify-center mb-6">
-                        <div className="w-3 h-3 bg-novaag-gold rounded-full" />
-                      </div>
+                  <div key={idx} className="flex justify-center items-center">
+                    {feature.icon && (
+                      <img 
+                        src={feature.icon} 
+                        alt={feature.name} 
+                        className="w-full max-w-[300px] h-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-xl" 
+                      />
                     )}
-                    <h3 className="text-sm md:text-base font-bold text-white uppercase tracking-wider">{feature.name}</h3>
                   </div>
                 ))}
               </div>
