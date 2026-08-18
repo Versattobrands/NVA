@@ -14,7 +14,7 @@ const AplitecFeature: React.FC<AplitecFeatureProps> = ({ name, icon, darkText = 
   if (iconOnly) {
     // Só o ícone, sem texto — o nome já está dentro da imagem PNG
     return (
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-start">
         {icon ? (
           <img src={icon} alt={name} className="h-20 w-auto object-contain drop-shadow-lg" />
         ) : (
