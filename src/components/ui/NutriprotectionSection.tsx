@@ -1,5 +1,6 @@
 import React from "react";
 import { type Product } from "../../data/products";
+import { ASSETS } from "../../data/assetsMap";
 
 interface NutriprotectionFeatureProps {
   name: string;
@@ -150,22 +151,30 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
                 </div>
               </div>
 
-              <div className="grid grid-cols-4 gap-2 text-center text-xs md:text-sm font-medium">
-                <div>
-                  <div className="h-16 w-full bg-[#167044] rounded-sm mb-2 opacity-50 flex items-center justify-center text-[10px]">Sem imagem</div>
-                  Percevejo Marrom<br/><span className="text-[10px]">(Euschistus Heros)</span>
+              <div className="flex flex-row justify-between w-full mt-8 gap-4 text-center text-white text-xs md:text-sm font-semibold">
+                <div className="flex flex-col items-center flex-1">
+                  <div className="w-full aspect-[4/3] rounded-sm mb-2 overflow-hidden bg-[#167044]/50 flex items-center justify-center">
+                    <img src={ASSETS.nutriprotectionIcons.bioshock.bugMarrom} alt="Percevejo Marrom" className="w-full h-full object-cover" />
+                  </div>
+                  <span>Percevejo Marrom<br/><span className="text-[10px] font-normal">(Euschistus Heros)</span></span>
                 </div>
-                <div>
-                  <div className="h-16 w-full bg-[#167044] rounded-sm mb-2 opacity-50 flex items-center justify-center text-[10px]">Sem imagem</div>
-                  Percevejo Verde Pequeno<br/><span className="text-[10px]">(Piezodorus Guildinii)</span>
+                <div className="flex flex-col items-center flex-1">
+                  <div className="w-full aspect-[4/3] rounded-sm mb-2 overflow-hidden bg-[#167044]/50 flex items-center justify-center">
+                    <img src={ASSETS.nutriprotectionIcons.bioshock.bugVerdePequeno} alt="Percevejo Verde Pequeno" className="w-full h-full object-cover" />
+                  </div>
+                  <span>Percevejo Verde Pequeno<br/><span className="text-[10px] font-normal">(Piezodorus Guildinii)</span></span>
                 </div>
-                <div>
-                  <div className="h-16 w-full bg-[#167044] rounded-sm mb-2 opacity-50 flex items-center justify-center text-[10px]">Sem imagem</div>
-                  Percevejo Verde<br/><span className="text-[10px]">(Nezara Viridula)</span>
+                <div className="flex flex-col items-center flex-1">
+                  <div className="w-full aspect-[4/3] rounded-sm mb-2 overflow-hidden bg-[#167044]/50 flex items-center justify-center">
+                    <img src={ASSETS.nutriprotectionIcons.bioshock.bugVerde} alt="Percevejo Verde" className="w-full h-full object-cover" />
+                  </div>
+                  <span>Percevejo Verde<br/><span className="text-[10px] font-normal">(Nezara Viridula)</span></span>
                 </div>
-                <div>
-                  <div className="h-16 w-full bg-[#167044] rounded-sm mb-2 opacity-50 flex items-center justify-center text-[10px]">Sem imagem</div>
-                  Percevejo Barriga Verde<br/><span className="text-[10px]">(Diceraeus Furcatus)</span>
+                <div className="flex flex-col items-center flex-1">
+                  <div className="w-full aspect-[4/3] rounded-sm mb-2 overflow-hidden bg-[#167044]/50 flex items-center justify-center">
+                    <img src={ASSETS.nutriprotectionIcons.bioshock.bugBarrigaVerde} alt="Percevejo Barriga Verde" className="w-full h-full object-cover" />
+                  </div>
+                  <span>Percevejo Barriga Verde<br/><span className="text-[10px] font-normal">(Diceraeus Furcatus)</span></span>
                 </div>
               </div>
             </div>

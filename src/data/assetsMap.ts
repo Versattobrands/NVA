@@ -153,6 +153,10 @@ export const ASSETS = {
       multiMecanismoAcao: "/images/Bioshock/multi_mecanismo_de_acao.png",
       phNeutro: "/images/Bioshock/ph_neutro.png",
       tankMix: "/images/Bioshock/tank_mix_compativel.png",
+      bugMarrom: "/images/Bioshock/percevejo.jpg",
+      bugVerdePequeno: "/images/Bioshock/percevejo_verde_pequeno.jpg",
+      bugVerde: "/images/Bioshock/percevejo_verde.jpg",
+      bugBarrigaVerde: "/images/Bioshock/percevejo_barriga_verde.jpg",
     }
   },
   logos: {
