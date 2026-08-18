@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/Button";
-import { HighlightedStatement } from "../components/ui/HighlightedStatement";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { CTASection } from "../components/ui/CTASection";
 import { SITE_CONTENT } from "../data/siteContent";
@@ -65,7 +64,8 @@ export const Home: React.FC = () => {
               <Link to="/quem-somos">Conheça nossa história</Link>
             </Button>
           </div>
-
+        </div>
+      </section>
 
       {/* ÁREAS DE ATUAÇÃO PREVIEW */}
       <section className="py-24 bg-novaag-black">
@@ -172,7 +172,7 @@ export const Home: React.FC = () => {
       {/* TROPPOIL HIGHLIGHT */}
       <section className="py-24 bg-novaag-green relative overflow-hidden">
         <div className="absolute top-0 right-0 w-2/3 h-full opacity-20">
-          <img src={ASSETS.images.troppoilBackground} alt="" className="w-full h-full object-cover object-left filter grayscale" />
+          <img src={ASSETS.images.comexBackground} alt="" className="w-full h-full object-cover object-left filter grayscale" />
           <div className="absolute inset-0 bg-gradient-to-r from-novaag-green to-transparent" />
         </div>
         <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">

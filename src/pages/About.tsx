@@ -1,5 +1,4 @@
 import React from "react";
-import { HighlightedStatement } from "../components/ui/HighlightedStatement";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { Timeline } from "../components/ui/Timeline";
 import { CTASection } from "../components/ui/CTASection";
