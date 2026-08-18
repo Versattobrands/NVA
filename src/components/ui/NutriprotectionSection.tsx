@@ -40,6 +40,13 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
     }
   };
 
+  const getGridCols = (slug: string) => {
+    if (["essencial", "lemond", "shock-sk31"].includes(slug)) {
+      return "grid-cols-1 md:grid-cols-3";
+    }
+    return "grid-cols-1 md:grid-cols-2";
+  };
+
   return (
     <div className="w-full flex flex-col gap-12">
       
@@ -216,10 +223,12 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
                   </div>
                 )}
                 
-                <div className="flex flex-row flex-wrap justify-end gap-x-6 gap-y-6">
-                  {product.features.map((feat, idx) => (
-                    <NutriprotectionFeature key={idx} name={feat.name} icon={feat.icon} />
-                  ))}
+                <div className="flex justify-end">
+                  <div className={`grid ${getGridCols(product.slug)} gap-x-8 gap-y-6 justify-items-start`}>
+                    {product.features.map((feat, idx) => (
+                      <NutriprotectionFeature key={idx} name={feat.name} icon={feat.icon} />
+                    ))}
+                  </div>
                 </div>
                 
               </div>

@@ -469,8 +469,8 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "PODER DO ALHO", icon: ASSETS.nutriprotectionIcons.essencial.poderAlho },
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.troppoil.tankMix }, // Using fallback if needed
       { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.troppoil.emulsificante },
-      { name: "REPELÊNCIA", icon: ASSETS.icons.repelencia },
-      { name: "EFEITO TRANSLAMINAR", icon: ASSETS.icons.efeitoTranslaminar }
+      { name: "REPELÊNCIA", icon: ASSETS.nutriprotectionIcons.essencial.repelencia },
+      { name: "EFEITO TRANSLAMINAR", icon: ASSETS.nutriprotectionIcons.essencial.efeitoTranslaminar }
     ]
   },
   {
@@ -483,8 +483,8 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "PODER DO D-LIMONENO", icon: ASSETS.nutriprotectionIcons.lemond.poderLimoneno },
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.troppoil.tankMix },
       { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.troppoil.emulsificante },
-      { name: "REPELÊNCIA", icon: ASSETS.icons.repelencia },
-      { name: "EFEITO TRANSLAMINAR", icon: ASSETS.icons.efeitoTranslaminar }
+      { name: "REPELÊNCIA", icon: ASSETS.nutriprotectionIcons.essencial.repelencia },
+      { name: "EFEITO TRANSLAMINAR", icon: ASSETS.nutriprotectionIcons.essencial.efeitoTranslaminar }
     ]
   },
   {
@@ -496,7 +496,7 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
     features: [
       { name: "MATURAÇÃO ENCHIMENTO QUALIDADE", icon: ASSETS.nutriprotectionIcons.shockSk31.maturacao },
       { name: "pH NEUTRO", icon: ASSETS.nutriprotectionIcons.shockSk31.phNeutro },
-      { name: "REPELÊNCIA", icon: ASSETS.icons.repelencia }
+      { name: "REPELÊNCIA", icon: ASSETS.nutriprotectionIcons.shockSk31.repelencia }
     ]
   },
   {

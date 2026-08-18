@@ -127,8 +127,10 @@ export const ASSETS = {
     essencial: {
       logo: "/images/essencial/logo_essencial.png",
       poderCitronela: "/images/essencial/poder_da_citronela.png",
-      poderAlho: "/images/essencial/poder_do_alho.png",
       poderLimoneno: "/images/essencial/poder_do_limoeiro.png",
+      poderAlho: "/images/essencial/poder_do_alho.png",
+      repelencia: "/images/essencial/repelencia.png",
+      efeitoTranslaminar: "/images/essencial/efeito_translaminar.png",
     },
     lemond: {
       logo: "/images/lemond/logo_lemond.png",
@@ -138,6 +140,7 @@ export const ASSETS = {
       logo: "/images/shock_sk31/logo_shock.png",
       maturacao: "/images/shock_sk31/maturacao_enchimento_qualidade.png",
       phNeutro: "/images/shock_sk31/ph_neutro.png",
+      repelencia: "/images/shock_sk31/repelencia.png",
     },
     suncal: {
       logo: "/images/Suncal/logo_Suncal.png",
