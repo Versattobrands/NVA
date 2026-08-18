@@ -11,9 +11,9 @@ interface AplitecFeatureProps {
 const AplitecFeature: React.FC<AplitecFeatureProps> = ({ name, icon, darkText = false }) => {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center p-2 shadow-sm border border-novaag-black/5">
+      <div className="flex-shrink-0 w-14 h-14 bg-white rounded-full flex items-center justify-center p-2 shadow-sm">
         {icon ? (
-          <img src={icon} alt={name} className="w-full h-full object-contain mix-blend-multiply opacity-90" />
+          <img src={icon} alt={name} className="w-full h-full object-contain" />
         ) : (
           <div className="w-2 h-2 rounded-full bg-novaag-red" />
         )}
