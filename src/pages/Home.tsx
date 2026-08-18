@@ -29,7 +29,7 @@ export const Home: React.FC = () => {
               {SITE_CONTENT.home.hero.stamp}
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-title font-bold tracking-tight mb-8 animate-in slide-in-from-bottom-6 duration-1000">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-title font-black italic uppercase tracking-tight mb-8 animate-in slide-in-from-bottom-6 duration-1000">
             {SITE_CONTENT.home.hero.headline}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mb-12 animate-in slide-in-from-bottom-8 duration-1000 delay-150">
