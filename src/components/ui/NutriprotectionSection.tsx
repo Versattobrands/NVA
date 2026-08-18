@@ -105,8 +105,15 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
 
       {/* FORÇA SANIT HERO */}
       {forcaSanit && (
-        <div className="relative w-full rounded-[2rem] overflow-hidden bg-black text-white shadow-2xl border-b-8 border-novaag-red flex flex-col pb-6 md:pb-12">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#111] to-[#000] z-0" />
+        <div className="relative w-full rounded-[2rem] overflow-hidden text-white shadow-2xl border-b-8 border-novaag-red flex flex-col pb-6 md:pb-12">
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `url(${ASSETS.images.forcaSanitBackground})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
           
           <div className="relative z-10 w-full p-8 md:p-12 flex flex-col justify-center items-center text-center">
             {forcaSanit.logo && (

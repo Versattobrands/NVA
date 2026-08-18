@@ -196,6 +196,7 @@ export const ASSETS = {
     stimulusBackground: "/images/background-stimulus.jpg",
     nutriprotectionBackground: "/images/background-nutriprotection.jpg",
     pmeBackground: "/images/background_pme.jpg",
+    forcaSanitBackground: "/images/background_forca_sanit.png",
     troppoilSquare: "/images/quadro-troppoil.jpg",
     productsHero: "/images/products_hero.png",
     map: "/images/mapa-brasil.png",
