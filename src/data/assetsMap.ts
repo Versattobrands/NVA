@@ -195,6 +195,7 @@ export const ASSETS = {
     aplitecBackground: "/images/background-aplitec.jpg",
     stimulusBackground: "/images/background-stimulus.jpg",
     nutriprotectionBackground: "/images/background-nutriprotection.jpg",
+    folhagensBackground: "/images/background_folhagens.jpg",
     pmeBackground: "/images/background_pme.jpg",
     forcaSanitBackground: "/images/background_forca_sanit.png",
     troppoilSquare: "/images/quadro-troppoil.jpg",

@@ -140,8 +140,16 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
 
       {/* BIOSHOCK HERO */}
       {bioshock && (
-        <div className="relative w-full rounded-[2rem] overflow-hidden bg-[#0e452a] text-white shadow-2xl flex flex-col pb-6 md:pb-12">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0b3320] to-[#125936] z-0" />
+        <div className="relative w-full rounded-[2rem] overflow-hidden text-white shadow-2xl flex flex-col pb-6 md:pb-12">
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `url(${ASSETS.images.folhagensBackground})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+          <div className="absolute inset-0 bg-[#0e452a]/70 mix-blend-multiply z-0" />
           
           <div className="relative z-10 w-full p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-12">
             
