@@ -53,8 +53,16 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
       
       {/* HONRA HERO */}
       {honra && (
-        <div className="relative w-full rounded-[2rem] overflow-hidden bg-[#1b365d] text-white shadow-2xl flex flex-col pb-6 md:pb-12">
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-[#2e52b2]/90 z-0" />
+        <div className="relative w-full rounded-[2rem] overflow-hidden text-white shadow-2xl flex flex-col pb-6 md:pb-12">
+          {/* Fundo de imagem cobrindo todo o bloco */}
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'url("/images/background-honra.png")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
           
           <div className="relative z-10 w-full p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-12">
             
