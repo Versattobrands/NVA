@@ -326,8 +326,8 @@ export const AGRO_PRODUCTS: Product[] = [
     notes: "Não utilizar o termo 'desalojante' sem validação técnica."
   },
   {
-    slug: "bioshok",
-    name: "Bioshok",
+    slug: "bioshock",
+    name: "Bioshock",
     area: "Agro",
     description: "Acondicionador para pulverizações eficientes contra percevejos.\n\nPercevejo-marrom — Euschistus heros\nPercevejo-verde-pequeno — Piezodorus guildinii\nPercevejo-verde — Nezara viridula\nPercevejo-barriga-verde — Diceraeus furcatus",
     image: ASSETS.products.generic,

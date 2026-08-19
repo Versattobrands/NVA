@@ -162,7 +162,7 @@ export const BusinessAreas: React.FC = () => {
 
       {/* Footer CTA */}
       <CTASection 
-        title="Fale com a Novaag."
+        title="Fale com a NVA."
         text="Conheça nossas áreas de atuação, produtos e possibilidades de parceria."
         buttonText="Fale com um especialista"
         buttonLink="/contato"

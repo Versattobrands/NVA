@@ -36,7 +36,7 @@ export const Home: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 animate-in slide-in-from-bottom-10 duration-1000 delay-300">
             <Button asChild size="lg" variant="accent" className="font-bold text-lg px-8">
-              <Link to="/quem-somos">Conheça a Novaag</Link>
+              <Link to="/quem-somos">Conheça a NVA</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-bold text-lg px-8 bg-transparent border-white/30 text-white hover:bg-white/10">
               <Link to="/areas-de-atuacao">Áreas de atuação</Link>
