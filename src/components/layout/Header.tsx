@@ -50,7 +50,7 @@ export const Header: React.FC = () => {
               <img
                 src={ASSETS.logos.principal}
                 alt="Novaag"
-                className="h-32 md:h-48 w-auto object-contain transition-all duration-300 group-hover:opacity-80 -my-6 md:-my-10 filter drop-shadow-2xl"
+                className="h-40 md:h-64 w-auto object-contain transition-all duration-300 group-hover:opacity-80 -my-8 md:my-[-52px] filter drop-shadow-2xl"
               />
             </Link>
           )}
