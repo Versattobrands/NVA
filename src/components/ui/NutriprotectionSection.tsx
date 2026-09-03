@@ -51,23 +51,7 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
     }
   };
 
-  const getGridCols = (slug: string) => {
-    switch(slug) {
-      case "vipmax":
-        return "grid-cols-1 sm:grid-cols-2";
-      case "aminoill":
-        return "grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
-      case "essencial":
-      case "lemond":
-        return "grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
-      case "shock-sk31":
-        return "grid-cols-1 sm:grid-cols-2";
-      case "suncal":
-        return "grid-cols-1 sm:grid-cols-2";
-      default:
-        return "grid-cols-1 sm:grid-cols-2";
-    }
-  };
+
 
   return (
     <div className="flex flex-col gap-12 w-full">
