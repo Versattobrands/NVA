@@ -4,6 +4,7 @@ import { cn } from "../../lib/utils";
 import { type Product } from "../../data/products";
 import { ProductFeature } from "./ProductFeature";
 import { ProductBenefits } from "./ProductBenefits";
+import { ProductLogo } from "./ProductLogo";
 import { Button } from "./Button";
 
 interface ProductRowProps {
@@ -48,9 +49,9 @@ export const ProductRow: React.FC<ProductRowProps> = ({ product, index }) => {
               Linha {product.area}
             </div>
             
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-product text-white mb-6">
-              {product.name}
-            </h3>
+            <div className="mb-6">
+              <ProductLogo productName={product.name} />
+            </div>
             
             <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10">
               {product.description}
