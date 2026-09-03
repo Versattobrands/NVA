@@ -1,11 +1,59 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { Timeline } from "../components/ui/Timeline";
 import { CTASection } from "../components/ui/CTASection";
 import { SITE_CONTENT } from "../data/siteContent";
 import { ASSETS } from "../data/assetsMap";
 
+const ImageSlider: React.FC<{ images: string[] }> = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4000); // 4 segundos
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <div className="relative w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-black/10">
+      {images.map((img, idx) => (
+        <img
+          key={idx}
+          src={img}
+          alt={`Slider ${idx}`}
+          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            idx === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
+        />
+      ))}
+      
+      {/* Indicadores */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              idx === currentIndex ? "w-8 bg-[#05a44d]" : "w-2 bg-white/70 hover:bg-white"
+            }`}
+            aria-label={`Ir para a imagem ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export const About: React.FC = () => {
+  const sliderImages = [
+    "/images/Fotografias/Captura de tela 2026-09-02 140748.png",
+    "/images/Fotografias/Captura de tela 2026-09-02 141415.png",
+    "/images/Fotografias/ChatGPT Image 2 de set. de 2026, 14_07_03.png",
+    "/images/Fotografias/ChatGPT Image 2 de set. de 2026, 14_13_45.png",
+    "/images/Fotografias/ChatGPT Image 2 de set. de 2026, 14_16_09.png"
+  ];
+
   return (
     <div className="flex flex-col w-full bg-novaag-black text-white">
       {/* HERO SECTION */}
@@ -28,18 +76,28 @@ export const About: React.FC = () => {
       {/* QUEM SOMOS TEXT */}
       <section className="py-24 bg-white text-novaag-black">
         <div className="container mx-auto px-4 md:px-6">
-          <SectionHeading title={SITE_CONTENT.home.aboutSummary.title} align="center" />
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-2xl text-novaag-black/80 leading-relaxed mb-12 font-medium">
-              {SITE_CONTENT.home.aboutSummary.text}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {SITE_CONTENT.home.aboutSummary.pillars.map((pillar, idx) => (
-                <span key={idx} className="px-5 py-2 rounded-lg bg-novaag-black/5 border border-novaag-black/10 text-novaag-green font-bold uppercase tracking-wider text-sm">
-                  {pillar}
-                </span>
-              ))}
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 max-w-7xl mx-auto">
+            
+            {/* Esquerda: Textos e Tags */}
+            <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
+              <SectionHeading title={SITE_CONTENT.home.aboutSummary.title} align="left" />
+              <p className="text-2xl text-novaag-black/80 leading-relaxed mb-12 font-medium">
+                {SITE_CONTENT.home.aboutSummary.text}
+              </p>
+              <div className="flex flex-wrap justify-start gap-4">
+                {SITE_CONTENT.home.aboutSummary.pillars.map((pillar, idx) => (
+                  <span key={idx} className="px-5 py-2 rounded-lg bg-novaag-black/5 border border-novaag-black/10 text-novaag-green font-bold uppercase tracking-wider text-sm">
+                    {pillar}
+                  </span>
+                ))}
+              </div>
             </div>
+
+            {/* Direita: Slider de Imagens */}
+            <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
+              <ImageSlider images={sliderImages} />
+            </div>
+
           </div>
         </div>
       </section>

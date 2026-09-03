@@ -166,12 +166,10 @@ export const AGRO_PRODUCTS: Product[] = [
     description: "Adjuvante de origem mineral com aditivos vegetais.",
     image: ASSETS.products.troppoil,
     features: [
-      { name: "Emulsificante", icon: ASSETS.icons.emulsificante },
-      { name: "Espalhante", icon: ASSETS.icons.espalhante },
-      { name: "Adesivo", icon: ASSETS.icons.adesivo },
-      { name: "Tank mix compatível", icon: ASSETS.icons.tankMix },
-      { name: "Anti-deriva", icon: ASSETS.icons.antiDeriva },
-      { name: "Dispersante", icon: ASSETS.icons.dispersante }
+      { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.troppoil.tankMix },
+      { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.troppoil.emulsificante },
+      { name: "ANTI-DERIVA", icon: ASSETS.aplitecIcons.troppoil.antiDeriva },
+      { name: "DISPERSANTE", icon: ASSETS.aplitecIcons.troppoil.dispersante }
     ],
     benefits: [
       "Melhora a cobertura e adesão das gotas na folha",
