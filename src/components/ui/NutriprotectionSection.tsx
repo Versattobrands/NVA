@@ -41,7 +41,7 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
       case "essencial":
         return "bg-[#162725]";
       case "lemond":
-        return "bg-[#2c2214]";
+        return "bg-[#ffb439]";
       case "shock-sk31":
         return "bg-[#2d2816]";
       case "suncal":
