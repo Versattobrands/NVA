@@ -32,13 +32,13 @@ const EVENTS: TimelineEvent[] = [
     year: "2023",
     title: "ENBI",
     image: ASSETS.logos.enbi,
-    description: "Integração da ENBI à trajetória."
+    description: "Modernização industrial consolidando o Grupo ENBI: Europlant Novaag Biotecnologia Industrial Ltda."
   },
   {
     year: "2024",
     title: "NovaAG",
     image: ASSETS.logos.novaAgAntigo,
-    description: "Nova identidade visual NovaAG."
+    description: "Nova identidade visual NOVAAG."
   },
   {
     year: "2026",
@@ -68,7 +68,7 @@ export const Timeline: React.FC = () => {
                 "w-full md:w-1/2 pl-12 md:pl-0",
                 isEven ? "md:pr-12 md:text-right" : "md:pl-12 md:ml-auto"
               )}>
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-novaag-black/5 hover:border-novaag-gold/50 transition-colors">
+                <div className="bg-novaag-green p-6 rounded-xl shadow-lg border border-novaag-green/30 hover:border-novaag-gold/50 transition-colors">
                   <span className="text-novaag-gold font-bold text-2xl mb-2 block font-title">
                     {event.year}
                   </span>
@@ -81,15 +81,15 @@ export const Timeline: React.FC = () => {
                       <img 
                         src={event.image} 
                         alt={event.title} 
-                        className="h-full object-contain transition-all"
+                        className="h-full object-contain transition-all brightness-0 invert"
                       />
                     </div>
                   )}
                   
-                  <h4 className="text-xl font-bold text-novaag-black mb-2">{event.title}</h4>
+                  <h4 className="text-xl font-bold text-white mb-2">{event.title}</h4>
                   
                   {event.description && (
-                    <p className="text-novaag-black/70 text-sm">
+                    <p className="text-white/80 text-sm">
                       {event.description}
                     </p>
                   )}
