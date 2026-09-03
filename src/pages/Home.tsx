@@ -8,6 +8,7 @@ import { ASSETS } from "../data/assetsMap";
 import { AGRO_PRODUCTS } from "../data/products";
 import { motion } from "framer-motion";
 import { NvaLogo } from "../components/ui/NvaLogo";
+import { InstagramSection } from "../components/ui/InstagramSection";
 
 export const Home: React.FC = () => {
   return (
@@ -67,6 +68,9 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* INSTAGRAM FEED */}
+      <InstagramSection />
 
       {/* ÁREAS DE ATUAÇÃO PREVIEW */}
       <section className="py-24 bg-novaag-black">
