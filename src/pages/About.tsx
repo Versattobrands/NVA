@@ -144,25 +144,27 @@ export const About: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div>
                   <h5 className="font-bold text-novaag-gold mb-1">Sorriso – MT</h5>
-                  <p className="text-sm text-white/70">Estoque estratégico</p>
+                  <p className="text-sm text-white/70">Centro de Distribuição<br/>Futura Planta Industrial</p>
                 </div>
                 <div>
                   <h5 className="font-bold text-novaag-gold mb-1">Campo Novo do Parecis – MT</h5>
-                  <p className="text-sm text-white/70">Planta industrial</p>
+                  <p className="text-sm text-white/70">Centro de Distribuição</p>
+                </div>
+                <div>
+                  <h5 className="font-bold text-novaag-gold mb-1">Patrocínio – MG</h5>
+                  <p className="text-sm text-white/70">Centro de Distribuição</p>
                 </div>
                 <div>
                   <h5 className="font-bold text-novaag-gold mb-1">Dumont – SP</h5>
-                  <p className="text-sm text-white/70">Planta industrial</p>
-                </div>
-                <div>
-                  <h5 className="font-bold text-novaag-gold mb-1">Jacareí – SP</h5>
-                  <p className="text-sm text-white/70">Futura planta industrial</p>
-                </div>
-                <div>
-                  <h5 className="font-bold text-novaag-gold mb-1">Patrocínio de Minas – MG</h5>
+                  <p className="text-sm text-white/70">Centro de Distribuição</p>
                 </div>
                 <div>
                   <h5 className="font-bold text-novaag-gold mb-1">Jardinópolis – SP</h5>
+                  <p className="text-sm text-white/70">Planta Industrial</p>
+                </div>
+                <div>
+                  <h5 className="font-bold text-novaag-gold mb-1">Jacareí – SP</h5>
+                  <p className="text-sm text-white/70">Centro de Distribuição<br/>Planta Industrial</p>
                 </div>
               </div>
             </div>

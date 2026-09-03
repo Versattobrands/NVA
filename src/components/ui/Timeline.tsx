@@ -81,7 +81,7 @@ export const Timeline: React.FC = () => {
                       <img 
                         src={event.image} 
                         alt={event.title} 
-                        className="h-full object-contain transition-all brightness-0 invert"
+                        className="h-full object-contain transition-all"
                       />
                     </div>
                   )}

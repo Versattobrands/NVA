@@ -292,12 +292,10 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
                   </div>
                 )}
                 
-                <div className="flex justify-end mb-6">
-                  <div className={`grid ${getGridCols(product.slug)} gap-x-8 gap-y-6 justify-items-start`}>
-                    {product.features.map((feat, idx) => (
-                      <NutriprotectionFeature key={idx} name={feat.name} icon={feat.icon} />
-                    ))}
-                  </div>
+                <div className="flex flex-wrap justify-center items-center gap-6 mb-6">
+                  {product.features.map((feat, idx) => (
+                    <NutriprotectionFeature key={idx} name={feat.name} icon={feat.icon} />
+                  ))}
                 </div>
 
                 {product.benefits && (
