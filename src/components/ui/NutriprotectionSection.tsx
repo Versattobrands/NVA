@@ -9,8 +9,8 @@ interface NutriprotectionSectionProps {
 
 export const NutriprotectionFeature: React.FC<{ name: string; icon?: string }> = ({ name, icon }) => {
   return (
-    <div className="flex items-center gap-4 group">
-      <div className="w-12 h-12 md:w-16 md:h-16 flex-shrink-0 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+    <div className="flex items-center justify-center group">
+      <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
         {icon ? (
           <img src={icon} alt={name} className="w-full h-full object-contain drop-shadow-md" />
         ) : (
@@ -19,9 +19,6 @@ export const NutriprotectionFeature: React.FC<{ name: string; icon?: string }> =
           </div>
         )}
       </div>
-      <span className="text-xs md:text-sm font-bold text-white uppercase tracking-wider text-left leading-snug">
-        {name}
-      </span>
     </div>
   );
 };

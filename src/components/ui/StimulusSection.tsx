@@ -8,8 +8,8 @@ interface StimulusSectionProps {
 
 export const StimulusFeature: React.FC<{ name: string; icon?: string }> = ({ name, icon }) => {
   return (
-    <div className="flex flex-col items-center justify-center text-center group">
-      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-105">
+    <div className="flex items-center justify-center group">
+      <div className="w-24 h-24 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
         {icon ? (
           <img src={icon} alt={name} className="w-full h-full object-contain" />
         ) : (
@@ -18,9 +18,6 @@ export const StimulusFeature: React.FC<{ name: string; icon?: string }> = ({ nam
           </div>
         )}
       </div>
-      <span className="text-[10px] md:text-xs font-bold text-white max-w-[100px] leading-tight uppercase tracking-wider">
-        {name}
-      </span>
     </div>
   );
 };
