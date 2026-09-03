@@ -20,6 +20,7 @@ export type Product = {
   logo?: string;
   infoBlocks?: InfoBlock[];
   features: ProductFeature[];
+  benefits?: string[];
   image?: string;
   technicalSheet?: string;
   featured?: boolean;
@@ -43,6 +44,12 @@ export const APLITEC_PRODUCTS: Product[] = [
       { name: "ANTI-DERIVA", icon: ASSETS.aplitecIcons.troppoil.antiDeriva },
       { name: "DISPERSANTE", icon: ASSETS.aplitecIcons.troppoil.dispersante }
     ],
+    benefits: [
+      "Melhora a cobertura e adesão das gotas na folha",
+      "Reduz a deriva na aplicação aérea e terrestre",
+      "Compatível com a maioria dos defensivos em tank mix",
+      "Origem mineral com aditivos vegetais de alta performance"
+    ],
     featured: true
   },
   {
@@ -58,6 +65,13 @@ export const APLITEC_PRODUCTS: Product[] = [
       { name: "ANTI-DERIVA", icon: ASSETS.aplitecIcons.sprayH.antiDeriva },
       { name: "ANTI-ESPUMA", icon: ASSETS.aplitecIcons.sprayH.antiEspuma },
       { name: "REDUTOR pH", icon: ASSETS.aplitecIcons.sprayH.redutorPh }
+    ],
+    benefits: [
+      "Otimiza a eficácia de herbicidas em tank mix",
+      "Reduz a tensão superficial e melhora o espalhamento",
+      "Elimina espuma indesejada no tanque",
+      "Reduz o pH da calda para maior estabilidade dos herbicidas",
+      "Minimiza a deriva durante a aplicação"
     ]
   },
   {
@@ -72,6 +86,13 @@ export const APLITEC_PRODUCTS: Product[] = [
       { name: "DISPERSANTE", icon: ASSETS.aplitecIcons.sprayIf.dispersante },
       { name: "ANTI-DERIVA", icon: ASSETS.aplitecIcons.sprayIf.antiDeriva },
       { name: "ANTI-ESPUMA", icon: ASSETS.aplitecIcons.sprayIf.antiEspuma }
+    ],
+    benefits: [
+      "Potencializa a eficácia de inseticidas e fungicidas",
+      "Melhora a cobertura e penetração na folha",
+      "Compatível com ampla gama de defensivos em tank mix",
+      "Controla a espuma durante o preparo da calda",
+      "Reduz a deriva e melhora a deposição"
     ]
   },
   {
@@ -83,6 +104,11 @@ export const APLITEC_PRODUCTS: Product[] = [
     features: [
       { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.detex.emulsificante },
       { name: "DISPERSANTE", icon: ASSETS.aplitecIcons.detex.dispersante }
+    ],
+    benefits: [
+      "Promove emulsificação eficiente de óleos vegetais brutos e degomados",
+      "Melhora a dispersão na calda de pulverização",
+      "Aumenta a cobertura e a adesão na folha"
     ]
   },
   {
@@ -93,6 +119,11 @@ export const APLITEC_PRODUCTS: Product[] = [
     description: "Compatibiliza misturas complexas de glifosato e outros defensivos com fertilizantes.",
     features: [
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.dsolv.tankMix }
+    ],
+    benefits: [
+      "Compatibiliza glifosato com fertilizantes foliares em tank mix",
+      "Evita a formação de precipitados e incompatibilidades na calda",
+      "Garante estabilidade em misturas complexas de defensivos"
     ]
   },
   {
@@ -103,6 +134,11 @@ export const APLITEC_PRODUCTS: Product[] = [
     description: "Compatibiliza misturas complexas de defensivos EC / Óleos / MANCOZEB.",
     features: [
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.aplitecIcons.dsolvM.tankMix }
+    ],
+    benefits: [
+      "Compatibiliza misturas de defensivos EC com óleos e MANCOZEB",
+      "Previne precipitações e separação de fases na calda",
+      "Facilita o preparo de caldas complexas com segurança"
     ]
   },
   {
@@ -113,6 +149,11 @@ export const APLITEC_PRODUCTS: Product[] = [
     description: "Elimina a espuma indesejada.",
     features: [
       { name: "ANTI-ESPUMA", icon: ASSETS.aplitecIcons.mataspuma.antiEspuma }
+    ],
+    benefits: [
+      "Elimina rapidamente a espuma no tanque de pulverização",
+      "Facilita o preparo correto da calda",
+      "Melhora a eficiência do enchimento e mistura"
     ]
   }
 ];
@@ -132,6 +173,12 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "Anti-deriva", icon: ASSETS.icons.antiDeriva },
       { name: "Dispersante", icon: ASSETS.icons.dispersante }
     ],
+    benefits: [
+      "Melhora a cobertura e adesão das gotas na folha",
+      "Reduz a deriva na aplicação aérea e terrestre",
+      "Compatível com a maioria dos defensivos em tank mix",
+      "Origem mineral com aditivos vegetais de alta performance"
+    ],
     featured: true
   },
   {
@@ -144,6 +191,10 @@ export const AGRO_PRODUCTS: Product[] = [
     notes: "Verificar se o produto oficial é Stimatrix Gold ao invés de Stimulus. Nome pendente de validação nos assets.",
     features: [
       { name: "Estimulação", icon: ASSETS.icons.estimulaEvolucao }
+    ],
+    benefits: [
+      "Estimula o desenvolvimento vegetal",
+      "Sinergismo com microrganismos benéficos do solo e da planta"
     ]
   },
   {
@@ -173,6 +224,13 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "Bio-sinergia", icon: ASSETS.icons.bioSinergia },
       { name: "Multi mecanismo de ação", icon: ASSETS.icons.multiMecanismo },
       { name: "Efeito protetor", icon: ASSETS.icons.efeitoProtetor }
+    ],
+    benefits: [
+      "Nutrição completa com todos os 17 macro e micronutrientes incluindo Selênio",
+      "L-aminoácidos e carboidratos de origem vegetal para bio-estimulação",
+      "Elicitores de reguladores de crescimento vegetal (PGRs) com algas",
+      "Promove bio-sinergia com a planta e organismos microbiológicos",
+      "Efeito anti-estresse e protetor"
     ]
   },
   {
@@ -187,6 +245,13 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "Ácidos húmicos", icon: ASSETS.icons.acidosFulvicos },
       { name: "Nutrição", icon: ASSETS.icons.nutricao },
       { name: "Bio-sinergia", icon: ASSETS.icons.bioSinergia }
+    ],
+    benefits: [
+      "Nutrição foliar com L-aminoácidos hidrolisados de alta absorção",
+      "Ácidos fúlvicos e húmicos para maior disponibilidade de nutrientes",
+      "Estimula a sinergia com a planta e organismos microbiológicos",
+      "Auxilia no manejo de distúrbios nutricionais",
+      "Efeito anti-estresse para melhor recuperação das plantas"
     ]
   },
   {
@@ -209,6 +274,13 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "Anti-estresse", icon: ASSETS.icons.antiEstresse },
       { name: "Multi mecanismo de ação", icon: ASSETS.icons.multiMecanismo },
       { name: "Manejo de distúrbio nutricional", icon: ASSETS.icons.disturbioNutricional }
+    ],
+    benefits: [
+      "Enraizador em pó com grafite secante para tratamento de sementes em batelada",
+      "Fornece micronutrientes essenciais: Ni, Co, Mo, Zn e B",
+      "Mais acabamento e menos água no TS batelada",
+      "Estimula o desenvolvimento e sinergia com organismos microbiológicos",
+      "Efeito anti-estresse e multi mecanismo de ação"
     ]
   },
   {
@@ -225,6 +297,12 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "Sanidade", icon: ASSETS.icons.sanidade },
       { name: "Resistência", icon: ASSETS.icons.inducaoResistencia }
     ],
+    benefits: [
+      "Plantas saudáveis e produtivas com múltiplos modos de ação",
+      "Praticidade no preparo de caldas — líquido, solúvel, compatível e pH neutro",
+      "Melhor eficiência e proteção junto a fungicidas sistêmicos",
+      "Promove nutrição, sanidade e indução de resistência"
+    ],
     notes: "Não afirmar controle de doenças."
   },
   {
@@ -238,6 +316,12 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "Dispersante", icon: ASSETS.icons.dispersante },
       { name: "Efeito protetor", icon: ASSETS.icons.efeitoProtetor },
       { name: "Auxílio ao manejo fitossanitário" }
+    ],
+    benefits: [
+      "Acondiciona a água de pulverização com eletrólitos estabilizadores",
+      "Aumenta a eficácia dos defensivos e promove melhor absorção foliar",
+      "Controla pH de águas ácidas e auxilia misturas de tanque",
+      "Efeito espalhante-adesivo para maior cobertura foliar"
     ]
   },
   {
@@ -257,6 +341,12 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "pH neutro", icon: ASSETS.icons.phNeutro },
       { name: "Efeito protetor", icon: ASSETS.icons.efeitoProtetor },
       { name: "Tecnologia de aminoácido + óleo" }
+    ],
+    benefits: [
+      "Tecnologia de aminoácido + óleo para maior absorção com herbicidas",
+      "Promove melhor absorção e nutrição em aplicações foliares",
+      "Reduz o pH da calda e elimina a espuma indesejada",
+      "Anti-deriva e efeito espalhante-adesivo de alta performance"
     ]
   },
   {
@@ -272,6 +362,12 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "Adesivo", icon: ASSETS.icons.adesivo },
       { name: "Repelência", icon: ASSETS.icons.repelencia },
       { name: "Efeito translaminar", icon: ASSETS.icons.efeitoTranslaminar }
+    ],
+    benefits: [
+      "100% miscível em água com efeito translaminar (aumenta absorção e translocação)",
+      "Quebra a tensão superficial da gota, dispensando outros adjuvantes",
+      "Melhora a estabilidade e compatibilidade da calda, reduzindo riscos de fitotoxicidade",
+      "Auxilia na limpeza do sistema de pulverização (tanque, peneiras e bicos)"
     ]
   },
   {
@@ -291,23 +387,36 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "Repelência", icon: ASSETS.icons.repelencia },
       { name: "Efeito translaminar", icon: ASSETS.icons.efeitoTranslaminar }
     ],
+    benefits: [
+      "Combinação de óleos essenciais de citronela, alho e D-limoneno (laranja)",
+      "Efeito translaminar para maior absorção e translocação dos defensivos",
+      "100% miscível em água e compatível em tank mix",
+      "Auxilia na limpeza do sistema de pulverização",
+      "Melhora a estabilidade da calda e reduz riscos de fitotoxicidade"
+    ],
     notes: "Não afirmar controle ou eliminação de pragas."
   },
   {
     slug: "shock-sk31",
     name: "Shock SK31",
     area: "Agro",
-    description: "Produto da área Agro. Informações técnicas em atualização.",
+    description: "Enxofre solúvel super concentrado para nutrir e sinalizar quimicamente as plantas.",
     image: ASSETS.products.generic,
     validationRequired: true,
     features: [],
+    benefits: [
+      "Enxofre solúvel super concentrado para nutrição foliar",
+      "Sinalização química das plantas para manejo fitossanitário",
+      "Promove maturação, enchimento e qualidade dos grãos/frutos",
+      "pH neutro e compatível com outros defensivos"
+    ],
     notes: "TODO: Solicitar a descrição técnica oficial e características confirmadas."
   },
   {
     slug: "suncal",
     name: "Suncal",
     area: "Agro",
-    description: "Produto associado à nutrição, proteção solar e sinalização química das plantas.",
+    description: "Nanopartículas para nutrição e proteção solar das plantas.",
     image: ASSETS.products.generic,
     features: [
       { name: "Enxofre solúvel", icon: ASSETS.icons.enxofreSoluvel },
@@ -322,6 +431,13 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "Efeito protetor", icon: ASSETS.icons.efeitoProtetor },
       { name: "Anti-estresse", icon: ASSETS.icons.antiEstresse },
       { name: "pH neutro", icon: ASSETS.icons.phNeutro }
+    ],
+    benefits: [
+      "Formulação líquida com nanopartículas de fácil aplicação via folha e solo",
+      "Alta percolação no perfil do solo, auxiliando no desenvolvimento radicular",
+      "Reflete parte da radiação UV e IV danosa — reduz a temperatura foliar e a evapotranspiração",
+      "Fornece minerais-chave para nutrição e proteção sob estresse climático",
+      "Efeito anti-estresse e protetor"
     ],
     notes: "Não utilizar o termo 'desalojante' sem validação técnica."
   },
@@ -338,6 +454,13 @@ export const AGRO_PRODUCTS: Product[] = [
       { name: "pH neutro", icon: ASSETS.icons.phNeutro },
       { name: "Bio-sinergia", icon: ASSETS.icons.bioSinergia },
       { name: "Multi mecanismo de ação", icon: ASSETS.icons.multiMecanismo }
+    ],
+    benefits: [
+      "Promove melhor eficácia dos defensivos contra percevejos",
+      "Auxilia no manejo de quebra de resistência",
+      "Acondiciona a água, neutraliza pH e promove efeito espalhante-adesivo",
+      "Multi mecanismo de ação: contato, especificidade e sinergia",
+      "Tank mix compatível com pH neutro"
     ],
     notes: "Usar a grafia oficial encontrada nos assets. Não afirmar controle de pragas sem validação regulatória."
   }
@@ -374,6 +497,13 @@ export const STIMULUS_PRODUCTS: Product[] = [
       { name: "MULTI MECANISMO DE AÇÃO", icon: ASSETS.stimulusIcons.stimatrixGold.multiMecanismoAcao },
       { name: "ESTIMULA EVOLUÇÃO", icon: ASSETS.stimulusIcons.stimatrixGold.estimulaEvolucao }
     ],
+    benefits: [
+      "Nutrição completa com todos os 17 macro e micronutrientes incluindo Selênio",
+      "L-aminoácidos e carboidratos de origem vegetal para bio-estimulação",
+      "Elicitores de reguladores de crescimento vegetal (PGRs) com algas",
+      "Promove bio-sinergia com a planta e organismos microbiológicos",
+      "Efeito anti-estresse e protetor de alta performance"
+    ],
     featured: true
   },
   {
@@ -386,6 +516,13 @@ export const STIMULUS_PRODUCTS: Product[] = [
       { name: "BIO SINERGIA", icon: ASSETS.stimulusIcons.aminobio.bioSinergia },
       { name: "ANTI ESTRESSE", icon: ASSETS.stimulusIcons.aminobio.antiEstresse },
       { name: "DISTÚRBIO NUTRICIONAL", icon: ASSETS.stimulusIcons.aminobio.disturbioNutricional }
+    ],
+    benefits: [
+      "Nutrição foliar com L-aminoácidos hidrolisados de alta absorção",
+      "Ácidos fúlvicos e húmicos para maior disponibilidade de nutrientes",
+      "Estimula a sinergia com a planta e organismos microbiológicos",
+      "Auxilia no manejo de distúrbios nutricionais",
+      "Efeito anti-estresse para melhor recuperação das plantas"
     ]
   },
   {
@@ -399,6 +536,13 @@ export const STIMULUS_PRODUCTS: Product[] = [
       { name: "MULTI MECANISMO DE AÇÃO", icon: ASSETS.stimulusIcons.nodusec.multiMecanismoAcao },
       { name: "ESTIMULA EVOLUÇÃO", icon: ASSETS.stimulusIcons.nodusec.estimulaEvolucao },
       { name: "MANEJO", icon: ASSETS.stimulusIcons.nodusec.manejo }
+    ],
+    benefits: [
+      "Enraizador em pó com grafite secante para tratamento de sementes em batelada",
+      "Fornece micronutrientes essenciais: Ni, Co, Mo, Zn e B",
+      "Mais acabamento e menos água no TS batelada",
+      "Estimula o desenvolvimento e sinergia com organismos microbiológicos",
+      "Efeito anti-estresse e multi mecanismo de ação"
     ]
   }
 ];
@@ -414,6 +558,12 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "MULTI MECANISMO DE AÇÃO", icon: ASSETS.nutriprotectionIcons.honra.multiMecanismoAcao },
       { name: "INDUÇÃO RESISTÊNCIA", icon: ASSETS.nutriprotectionIcons.honra.inducaoResistencia },
       { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.honra.efeitoProtetor }
+    ],
+    benefits: [
+      "Plantas saudáveis e produtivas com múltiplos modos de ação",
+      "Praticidade no preparo de caldas — líquido, solúvel, compatível e pH neutro",
+      "Melhor eficiência e proteção junto a fungicidas sistêmicos",
+      "Promove nutrição, sanidade e indução de resistência"
     ]
   },
   {
@@ -426,6 +576,11 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "MULTI MECANISMO DE AÇÃO", icon: ASSETS.nutriprotectionIcons.forcaSanit.multiMecanismoAcao },
       { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.forcaSanit.efeitoProtetor },
       { name: "DISPERSANTE", icon: ASSETS.aplitecIcons.sprayH.dispersante } // Using an existing dispersante icon as fallback if specific doesn't exist
+    ],
+    benefits: [
+      "Otimização do controle no manejo fitossanitário",
+      "Maior força e eficiência contra doenças no manejo",
+      "Multi mecanismo de ação com efeito protetor e dispersante"
     ]
   },
   {
@@ -439,6 +594,12 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "pH NEUTRO", icon: ASSETS.nutriprotectionIcons.vipmax.phNeutro },
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.nutriprotectionIcons.vipmax.tankMix },
       { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.vipmax.efeitoProtetor }
+    ],
+    benefits: [
+      "Acondiciona a água de pulverização com eletrólitos estabilizadores",
+      "Aumenta a eficácia dos defensivos e promove melhor absorção foliar",
+      "Controla pH de águas ácidas e auxilia misturas de tanque",
+      "Efeito espalhante-adesivo para maior cobertura foliar"
     ]
   },
   {
@@ -455,6 +616,12 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "ANTI-DERIVA", icon: ASSETS.nutriprotectionIcons.aminoill.antiDeriva },
       { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.aminoill.efeitoProtetor },
       { name: "ANTI-ESTRESSE", icon: ASSETS.nutriprotectionIcons.aminoill.antiEstresse }
+    ],
+    benefits: [
+      "Tecnologia de aminoácido + óleo para maior absorção com herbicidas",
+      "Promove melhor absorção e nutrição em aplicações foliares",
+      "Reduz o pH da calda e elimina a espuma indesejada",
+      "Anti-deriva e efeito espalhante-adesivo de alta performance"
     ]
   },
   {
@@ -471,6 +638,12 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.troppoil.emulsificante },
       { name: "REPELÊNCIA", icon: ASSETS.nutriprotectionIcons.essencial.repelencia },
       { name: "EFEITO TRANSLAMINAR", icon: ASSETS.nutriprotectionIcons.essencial.efeitoTranslaminar }
+    ],
+    benefits: [
+      "100% miscível em água com efeito translaminar (aumenta absorção e translocação)",
+      "Quebra a tensão superficial da gota, dispensando outros adjuvantes",
+      "Melhora a estabilidade e compatibilidade da calda, reduzindo riscos de fitotoxicidade",
+      "Auxilia na limpeza do sistema de pulverização (tanque, peneiras e bicos)"
     ]
   },
   {
@@ -485,6 +658,13 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "EMULSIFICANTE ESPALHANTE ADESIVO", icon: ASSETS.aplitecIcons.troppoil.emulsificante },
       { name: "REPELÊNCIA", icon: ASSETS.nutriprotectionIcons.essencial.repelencia },
       { name: "EFEITO TRANSLAMINAR", icon: ASSETS.nutriprotectionIcons.essencial.efeitoTranslaminar }
+    ],
+    benefits: [
+      "Combinação de óleos essenciais de citronela, alho e D-limoneno (laranja)",
+      "Efeito translaminar para maior absorção e translocação dos defensivos",
+      "100% miscível em água e compatível em tank mix",
+      "Auxilia na limpeza do sistema de pulverização",
+      "Melhora a estabilidade da calda e reduz riscos de fitotoxicidade"
     ]
   },
   {
@@ -497,6 +677,12 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "MATURAÇÃO ENCHIMENTO QUALIDADE", icon: ASSETS.nutriprotectionIcons.shockSk31.maturacao },
       { name: "pH NEUTRO", icon: ASSETS.nutriprotectionIcons.shockSk31.phNeutro },
       { name: "REPELÊNCIA", icon: ASSETS.nutriprotectionIcons.shockSk31.repelencia }
+    ],
+    benefits: [
+      "Enxofre solúvel super concentrado para nutrição foliar",
+      "Sinalização química das plantas para manejo fitossanitário",
+      "Promove maturação, enchimento e qualidade dos grãos/frutos",
+      "pH neutro e repelência natural"
     ]
   },
   {
@@ -509,6 +695,13 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "DISTÚRBIO NUTRICIONAL", icon: ASSETS.nutriprotectionIcons.suncal.disturbioNutricional },
       { name: "EFEITO PROTETOR", icon: ASSETS.nutriprotectionIcons.suncal.efeitoProtetor },
       { name: "ANTI-ESTRESSE", icon: ASSETS.stimulusIcons.stimatrixGold.antiEstresse } // fallback
+    ],
+    benefits: [
+      "Formulação líquida com nanopartículas de fácil aplicação via folha e solo",
+      "Alta percolação no perfil do solo, auxiliando no desenvolvimento radicular",
+      "Reflete parte da radiação UV e IV danosa — reduz a temperatura foliar e a evapotranspiração",
+      "Fornece minerais-chave para nutrição e proteção sob estresse climático",
+      "Efeito anti-estresse e protetor"
     ]
   },
   {
@@ -522,6 +715,13 @@ export const NUTRIPROTECTION_PRODUCTS: Product[] = [
       { name: "BIO SINERGIA", icon: ASSETS.nutriprotectionIcons.bioshock.bioSinergia },
       { name: "pH NEUTRO", icon: ASSETS.nutriprotectionIcons.bioshock.phNeutro },
       { name: "MULTI MECANISMO DE AÇÃO", icon: ASSETS.nutriprotectionIcons.bioshock.multiMecanismoAcao }
+    ],
+    benefits: [
+      "Promove melhor eficácia dos defensivos contra percevejos",
+      "Auxilia no manejo de quebra de resistência",
+      "Acondiciona a água, neutraliza pH e promove efeito espalhante-adesivo",
+      "Multi mecanismo de ação: contato, especificidade e sinergia",
+      "Tank mix compatível com pH neutro"
     ]
   }
 ];
@@ -538,6 +738,15 @@ export const PME_PRODUCTS: Product[] = [
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.nutriprotectionIcons.phn.tankMix },
       { name: "ANTI-ESTRESSE", icon: ASSETS.nutriprotectionIcons.phn.antiEstresse },
       { name: "pH NEUTRO", icon: ASSETS.nutriprotectionIcons.phn.phNeutro }
+    ],
+    benefits: [
+      "Micronizados, solúveis e em pó concentrado com pH neutro",
+      "Alta compatibilidade com fungicidas e inseticidas em tank mix",
+      "PHn BIOMAG: ativador enzimático e constituinte da clorofila com L-aminoácidos",
+      "PHn BORO: nutrição foliar de Boro ao longo do ciclo da cultura",
+      "PHn CAB: Cálcio e Boro com aminoácidos para florescimento e pegamento",
+      "PHn KS50: Potássio solúvel para translocação de fotoassimilados",
+      "PHn MOVIK: NPK e micronutrientes solúveis com polissacarídeos"
     ]
   },
   {
@@ -549,6 +758,12 @@ export const PME_PRODUCTS: Product[] = [
     features: [
       { name: "DISTÚRBIO NUTRICIONAL", icon: ASSETS.nutriprotectionIcons.pme.disturbioNutricional },
       { name: "TANK MIX COMPATÍVEL", icon: ASSETS.nutriprotectionIcons.pme.tankMix }
+    ],
+    benefits: [
+      "Pó micronizado especial totalmente solúvel",
+      "Nutrição micronutricional equilibrada e anti-estresse",
+      "Alta compatibilidade em tank mix com fungicidas e inseticidas",
+      "pH neutro para máxima compatibilidade com defensivos"
     ]
   }
 ];
