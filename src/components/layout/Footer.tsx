@@ -57,8 +57,11 @@ export const Footer: React.FC = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-novaag-red shrink-0 mt-0.5" />
                 <span className="text-white/60 text-sm font-bold">
-                  [Endereço Placeholder]<br />
-                  Cidade - UF, 00000-000
+                  R. Adelaíde Zangrande, 85 - Industrial<br />
+                  Jardinópolis - SP, 14680-000<br />
+                  <br />
+                  Estr. Hondo Japão, 235 - Jamic<br />
+                  Jacareí - SP, 12331-680
                 </span>
               </li>
               <li className="flex items-center gap-3">
