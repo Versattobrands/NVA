@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BusinessAreaSection } from "../components/ui/BusinessAreaSection";
 import { BUSINESS_AREAS } from "../data/businessAreas";
 import { APLITEC_PRODUCTS, STIMULUS_PRODUCTS, NUTRIPROTECTION_PRODUCTS, PME_PRODUCTS } from "../data/products";
@@ -7,12 +7,30 @@ import { StimulusSection } from "../components/ui/StimulusSection";
 import { NutriprotectionSection } from "../components/ui/NutriprotectionSection";
 import { PmeSection } from "../components/ui/PmeSection";
 import { CTASection } from "../components/ui/CTASection";
+import { Button } from "../components/ui/Button";
+import { motion } from "framer-motion";
 import { ASSETS } from "../data/assetsMap";
 
 export const BusinessAreas: React.FC = () => {
   const agroArea = BUSINESS_AREAS.find(a => a.id === "agro");
   const comexArea = BUSINESS_AREAS.find(a => a.id === "comex");
   const industrialArea = BUSINESS_AREAS.find(a => a.id === "industrial");
+
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      setTimeout(() => {
+        scrollToSection(id);
+      }, 100);
+    }
+  }, []);
 
   return (
     <div className="flex flex-col w-full bg-novaag-black min-h-screen pt-24 relative">
@@ -38,9 +56,133 @@ export const BusinessAreas: React.FC = () => {
         </div>
       </div>
 
+      {/* Cards Preview Section */}
+      <section className="py-16 md:py-24 bg-novaag-black border-b border-white/5">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-novaag-gold font-bold uppercase tracking-widest text-xs md:text-sm">
+              Conheça em detalhes
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black font-title text-white uppercase tracking-tight mt-2">
+              ÁREAS DE ATUAÇÃO
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Agro */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              onClick={() => scrollToSection("agro")}
+              className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-novaag-green/20 cursor-pointer border border-white/5 hover:border-novaag-lime/30 transition-colors shadow-2xl"
+            >
+              <img 
+                src={ASSETS.images.field1} 
+                alt="Agro" 
+                className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-novaag-black via-novaag-black/50 to-transparent" />
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <h3 className="text-3xl font-title font-bold text-white mb-4">Agro</h3>
+                <p className="text-white/80 mb-6 line-clamp-3">
+                  Especialidades agrícolas, fertilizantes, biofertilizantes e soluções técnicas para os desafios reais do campo.
+                </p>
+                <Button asChild variant="accent" className="w-full">
+                  <a 
+                    href="#agro" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      scrollToSection("agro");
+                    }}
+                  >
+                    Conheça o Agro
+                  </a>
+                </Button>
+              </div>
+            </motion.div>
+            
+            {/* Comex */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              onClick={() => scrollToSection("comex")}
+              className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-novaag-green/20 cursor-pointer border border-white/5 hover:border-novaag-lime/30 transition-colors shadow-2xl"
+            >
+              <img 
+                src={ASSETS.images.worldMap} 
+                alt="Comex - Expansão Global" 
+                className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-screen group-hover:scale-105 transition-transform duration-700" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-novaag-black via-novaag-black/50 to-transparent" />
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <h3 className="text-3xl font-title font-bold text-white mb-4">Comex</h3>
+                <p className="text-white/80 mb-6 line-clamp-3">
+                  Expansão do know-how brasileiro através de alianças estratégicas e parcerias duradouras.
+                </p>
+                <Button asChild variant="accent" className="w-full">
+                  <a 
+                    href="#comex" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      scrollToSection("comex");
+                    }}
+                  >
+                    Conheça o Comex
+                  </a>
+                </Button>
+              </div>
+            </motion.div>
+            
+            {/* Industrial */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              onClick={() => scrollToSection("industrial")}
+              className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-novaag-green/20 cursor-pointer border border-white/5 hover:border-novaag-lime/30 transition-colors shadow-2xl"
+            >
+              <img 
+                src={ASSETS.images.industry} 
+                alt="Industrial" 
+                className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-novaag-black via-novaag-black/50 to-transparent" />
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <h3 className="text-3xl font-title font-bold text-white mb-4">Industrial</h3>
+                <p className="text-white/80 mb-6 line-clamp-3">
+                  Insumos especiais, terceirizações e desenvolvimento de soluções para diferentes cadeias produtivas.
+                </p>
+                <Button asChild variant="accent" className="w-full">
+                  <a 
+                    href="#industrial" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      scrollToSection("industrial");
+                    }}
+                  >
+                    Conheça o Industrial
+                  </a>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Agro Section */}
       {agroArea && (
-        <div id="agro">
+        <div id="agro" className="scroll-mt-28">
           <BusinessAreaSection area={agroArea} index={0} />
 
           {/* Produtos Agro */}
@@ -148,14 +290,14 @@ export const BusinessAreas: React.FC = () => {
 
       {/* Comex Section */}
       {comexArea && (
-        <div id="comex">
+        <div id="comex" className="scroll-mt-28">
           <BusinessAreaSection area={comexArea} index={1} />
         </div>
       )}
 
       {/* Industrial Section */}
       {industrialArea && (
-        <div id="industrial">
+        <div id="industrial" className="scroll-mt-28">
           <BusinessAreaSection area={industrialArea} index={2} />
         </div>
       )}

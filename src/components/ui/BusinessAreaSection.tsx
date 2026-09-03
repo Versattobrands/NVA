@@ -50,11 +50,13 @@ export const BusinessAreaSection: React.FC<BusinessAreaSectionProps> = ({ area, 
           {/* Image Side */}
           <div className="w-full lg:w-1/2 flex justify-center items-center">
             {area.id === "comex" ? (
-              <img 
-                src={area.image} 
-                alt={area.name} 
-                className="w-full max-w-lg object-contain filter hover:brightness-110 transition-all duration-700 hover:-translate-y-2"
-              />
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl w-full max-w-xl border border-white/10 group">
+                <img 
+                  src={area.image} 
+                  alt={area.name} 
+                  className="w-full h-full object-cover filter hover:brightness-110 transition-all duration-700 group-hover:scale-105"
+                />
+              </div>
             ) : area.id === "industrial" ? (
               <img 
                 src={area.image} 

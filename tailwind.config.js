@@ -11,6 +11,7 @@ export default {
           // ─── PALETA OFICIAL NVA ─── use SOMENTE essas 5 cores
           red:   '#D91E2D',  // Vermelho
           green: '#2C3F34',  // Verde escuro
+          lime:  '#05a44d',  // Verde limão CTA
           gold:  '#F5A823',  // Dourado / Amarelo
           black: '#0A0A0A',  // Preto
           white: '#FFFFFF',  // Branco
@@ -21,7 +22,7 @@ export default {
           medium:   '#2C3F34', // → green
           petrol:   '#2C3F34', // → green
           tech:     '#D91E2D', // → red
-          accent:   '#F5A823', // → gold
+          accent:   '#05a44d', // → lime (#05a44d)
           gray:     '#0A0A0A', // → black
           beige:    '#FFFFFF', // → white
           offwhite: '#FFFFFF', // → white

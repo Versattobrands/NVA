@@ -72,6 +72,24 @@ export const Troppoil: React.FC = () => {
               </div>
             </div>
           )}
+
+          {/* Benefícios */}
+          {troppoil?.benefits && (
+            <div className="mt-16 max-w-3xl mx-auto bg-black/40 border border-white/10 p-8 md:p-10 rounded-2xl backdrop-blur-sm">
+              <h3 className="text-xl md:text-2xl font-bold text-white uppercase tracking-wider mb-6 text-center flex items-center justify-center gap-2">
+                <span className="inline-block w-2.5 h-2.5 rounded-full bg-[#05a44d]" />
+                Benefícios Comprovados
+              </h3>
+              <ul className="space-y-3.5">
+                {troppoil.benefits.map((benefit, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-white/90 text-base md:text-lg leading-relaxed">
+                    <span className="text-[#05a44d] font-black text-xl leading-none select-none shrink-0 mt-0.5">✓</span>
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </section>
 

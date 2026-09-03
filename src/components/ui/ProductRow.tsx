@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { cn } from "../../lib/utils";
 import { type Product } from "../../data/products";
 import { ProductFeature } from "./ProductFeature";
+import { ProductBenefits } from "./ProductBenefits";
 import { Button } from "./Button";
 
 interface ProductRowProps {
@@ -74,6 +75,12 @@ export const ProductRow: React.FC<ProductRowProps> = ({ product, index }) => {
                 {product.features.map((feature, idx) => (
                   <ProductFeature key={idx} feature={feature} />
                 ))}
+              </div>
+            )}
+            
+            {product.benefits && product.benefits.length > 0 && (
+              <div className="mb-10">
+                <ProductBenefits benefits={product.benefits} />
               </div>
             )}
             

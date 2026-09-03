@@ -1,60 +1,82 @@
 import React from "react";
-import { type Product } from "../../data/products";
+import type { Product } from "../../data/products";
 import { ASSETS } from "../../data/assetsMap";
-
-interface NutriprotectionFeatureProps {
-  name: string;
-  icon?: string;
-}
-
-export const NutriprotectionFeature: React.FC<NutriprotectionFeatureProps> = ({ name, icon }) => {
-  return (
-    <div className="flex items-center justify-start">
-      {icon ? (
-        <img src={icon} alt={name} className="h-16 md:h-20 w-auto object-contain drop-shadow-md" />
-      ) : (
-        <div className="w-16 h-16 rounded-full bg-white/20 border-2 border-white" />
-      )}
-    </div>
-  );
-};
+import { ProductBenefits } from "./ProductBenefits";
 
 interface NutriprotectionSectionProps {
   products: Product[];
 }
 
+export const NutriprotectionFeature: React.FC<{ name: string; icon?: string }> = ({ name, icon }) => {
+  return (
+    <div className="flex items-center gap-4 group">
+      <div className="w-12 h-12 md:w-16 md:h-16 flex-shrink-0 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+        {icon ? (
+          <img src={icon} alt={name} className="w-full h-full object-contain drop-shadow-md" />
+        ) : (
+          <div className="w-10 h-10 rounded-full border-2 border-dashed border-white/20 flex items-center justify-center text-xs text-white/40">
+            N/A
+          </div>
+        )}
+      </div>
+      <span className="text-xs md:text-sm font-bold text-white uppercase tracking-wider text-left leading-snug">
+        {name}
+      </span>
+    </div>
+  );
+};
+
 export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ products }) => {
   const honra = products.find(p => p.slug === "honra");
   const forcaSanit = products.find(p => p.slug === "forca-sanit");
   const bioshock = products.find(p => p.slug === "bioshock");
-  const horizontalProducts = products.filter(p => p.slug !== "honra" && p.slug !== "forca-sanit" && p.slug !== "bioshock");
+  
+  const horizontalProducts = products.filter(p => 
+    !["honra", "forca-sanit", "bioshock"].includes(p.slug)
+  );
 
   const getBgColor = (slug: string) => {
     switch(slug) {
-      case "vipmax": return "bg-[#1b365d]";
-      case "aminoill": return "bg-[#1a1914]";
-      case "essencial": return "bg-[#0f4c3a]";
-      case "lemond": return "bg-[#f26b21]";
-      case "shock-sk31": return "bg-[#5a2b22]";
-      case "suncal": return "bg-[#1b365d]";
-      default: return "bg-[#12110c]";
+      case "vipmax":
+        return "bg-[#18233a]";
+      case "aminoill":
+        return "bg-[#2d1b22]";
+      case "essencial":
+        return "bg-[#162725]";
+      case "lemond":
+        return "bg-[#2c2214]";
+      case "shock-sk31":
+        return "bg-[#2d2816]";
+      case "suncal":
+        return "bg-[#1a232e]";
+      default:
+        return "bg-[#12110c]";
     }
   };
 
   const getGridCols = (slug: string) => {
-    if (["essencial", "lemond", "shock-sk31"].includes(slug)) {
-      return "grid-cols-1 md:grid-cols-3";
+    switch(slug) {
+      case "vipmax":
+        return "grid-cols-1 sm:grid-cols-2";
+      case "aminoill":
+        return "grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
+      case "essencial":
+      case "lemond":
+        return "grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
+      case "shock-sk31":
+        return "grid-cols-1 sm:grid-cols-2";
+      case "suncal":
+        return "grid-cols-1 sm:grid-cols-2";
+      default:
+        return "grid-cols-1 sm:grid-cols-2";
     }
-    return "grid-cols-1 md:grid-cols-2";
   };
 
   return (
-    <div className="w-full flex flex-col gap-12">
-      
+    <div className="flex flex-col gap-12 w-full">
       {/* HONRA HERO */}
       {honra && (
-        <div className="relative w-full rounded-[2rem] overflow-hidden text-white shadow-2xl flex flex-col pb-6 md:pb-12">
-          {/* Fundo de imagem cobrindo todo o bloco */}
+        <div className="relative w-full rounded-[2rem] overflow-hidden text-white shadow-2xl border-b-8 border-novaag-red flex flex-col pb-6 md:pb-12">
           <div 
             className="absolute inset-0 z-0"
             style={{
@@ -63,24 +85,27 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
               backgroundPosition: 'center',
             }}
           />
+          <div className="absolute inset-0 bg-black/50 z-0" />
           
           <div className="relative z-10 w-full p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-12">
             
-            {/* Left side: Logo & Text */}
+            {/* Left side: Main Content */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center">
               {honra.logo && (
-                <img
-                  src={honra.logo}
-                  alt={honra.name}
-                  className="w-full max-w-[400px] object-contain drop-shadow-lg mb-8"
-                />
+                <div className="mb-8">
+                  <img
+                    src={honra.logo}
+                    alt={honra.name}
+                    className="w-full max-w-[500px] object-contain drop-shadow-lg"
+                  />
+                </div>
               )}
               
-              <p className="text-white text-lg md:text-xl font-medium leading-relaxed mb-12">
+              <p className="text-white text-lg md:text-xl font-medium leading-relaxed mb-8">
                 {honra.description}
               </p>
               
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 mb-6">
                 <h3 className="text-3xl font-black italic">MULTIAÇÃO</h3>
                 <div className="flex flex-row flex-wrap gap-4">
                   <div className="bg-[#2e52b2] text-white font-bold py-3 px-6 border-2 border-[#1b365d] shadow-lg">CONTATO</div>
@@ -88,6 +113,10 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
                   <div className="bg-[#2e52b2] text-white font-bold py-3 px-6 border-2 border-[#1b365d] shadow-lg">NUTRIÇÃO</div>
                 </div>
               </div>
+
+              {honra.benefits && (
+                <ProductBenefits benefits={honra.benefits} />
+              )}
             </div>
 
             {/* Right side: Sidebar Features */}
@@ -129,11 +158,17 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
               {forcaSanit.description}
             </p>
 
-            <div className="flex flex-row flex-wrap justify-center gap-x-12 gap-y-8">
+            <div className="flex flex-row flex-wrap justify-center gap-x-12 gap-y-8 mb-8">
               {forcaSanit.features.map((feat, idx) => (
                 <NutriprotectionFeature key={idx} name={feat.name} icon={feat.icon} />
               ))}
             </div>
+
+            {forcaSanit.benefits && (
+              <div className="w-full max-w-3xl text-left">
+                <ProductBenefits benefits={forcaSanit.benefits} />
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -201,6 +236,10 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
                   <span>Percevejo Barriga Verde<br/><span className="text-[10px] font-normal">(Diceraeus Furcatus)</span></span>
                 </div>
               </div>
+
+              {bioshock.benefits && (
+                <ProductBenefits benefits={bioshock.benefits} />
+              )}
             </div>
 
             {/* Right side: Sidebar Features */}
@@ -245,7 +284,7 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
                 )}
               </div>
               
-              {/* Content Column (Text + Features) */}
+              {/* Content Column (Text + Features + Benefits) */}
               <div className="w-full lg:w-3/5 flex flex-col justify-between">
                 
                 {product.description && (
@@ -256,13 +295,17 @@ export const NutriprotectionSection: React.FC<NutriprotectionSectionProps> = ({ 
                   </div>
                 )}
                 
-                <div className="flex justify-end">
+                <div className="flex justify-end mb-6">
                   <div className={`grid ${getGridCols(product.slug)} gap-x-8 gap-y-6 justify-items-start`}>
                     {product.features.map((feat, idx) => (
                       <NutriprotectionFeature key={idx} name={feat.name} icon={feat.icon} />
                     ))}
                   </div>
                 </div>
+
+                {product.benefits && (
+                  <ProductBenefits benefits={product.benefits} />
+                )}
                 
               </div>
             </div>

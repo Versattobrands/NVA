@@ -1,6 +1,7 @@
 import React from "react";
 import type { Product } from "../../data/products";
 import { NutriprotectionFeature } from "./NutriprotectionSection";
+import { ProductBenefits } from "./ProductBenefits";
 
 interface PmeSectionProps {
   products: Product[];
@@ -25,7 +26,7 @@ export const PmeSection: React.FC<PmeSectionProps> = ({ products }) => {
               )}
             </div>
             
-            {/* Content Column (Text + Features) */}
+            {/* Content Column (Text + Features + Benefits) */}
             <div className="w-full lg:w-3/5 flex flex-col justify-between">
               
               {product.description && (
@@ -36,13 +37,17 @@ export const PmeSection: React.FC<PmeSectionProps> = ({ products }) => {
                 </div>
               )}
               
-              <div className="flex justify-start">
+              <div className="flex justify-start mb-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 justify-items-start">
                   {product.features.map((feat, idx) => (
                     <NutriprotectionFeature key={idx} name={feat.name} icon={feat.icon} />
                   ))}
                 </div>
               </div>
+
+              {product.benefits && (
+                <ProductBenefits benefits={product.benefits} />
+              )}
               
             </div>
           </div>

@@ -35,7 +35,7 @@ export const BUSINESS_AREAS: BusinessArea[] = [
     name: "Comex",
     subtitle: "Alianças estratégicas",
     description: "Expansão do know-how brasileiro para outros mercados através de parcerias duradouras que complementam o pós-venda com dinamismo, customização, flexibilidade, inovação e valor justo.",
-    image: ASSETS.images.map,
+    image: ASSETS.images.worldMap,
     cta: "Conheça o Comex"
   },
   {

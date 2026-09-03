@@ -7,6 +7,7 @@ import { SITE_CONTENT } from "../data/siteContent";
 import { ASSETS } from "../data/assetsMap";
 import { AGRO_PRODUCTS } from "../data/products";
 import { motion } from "framer-motion";
+import { NvaLogo } from "../components/ui/NvaLogo";
 
 export const Home: React.FC = () => {
   return (
@@ -28,15 +29,15 @@ export const Home: React.FC = () => {
               {SITE_CONTENT.home.hero.stamp}
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-title font-black italic uppercase tracking-tight mb-8 animate-in slide-in-from-bottom-6 duration-1000">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-title font-black italic uppercase tracking-tight mb-10 animate-in slide-in-from-bottom-6 duration-1000">
             {SITE_CONTENT.home.hero.headline}
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mb-12 animate-in slide-in-from-bottom-8 duration-1000 delay-150">
-            {SITE_CONTENT.home.hero.subheadline}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 animate-in slide-in-from-bottom-10 duration-1000 delay-300">
+          <div className="flex flex-col sm:flex-row items-center gap-6 animate-in slide-in-from-bottom-8 duration-1000 delay-200">
             <Button asChild size="lg" variant="accent" className="font-bold text-lg px-8">
-              <Link to="/quem-somos">Conheça a NVA</Link>
+              <Link to="/quem-somos" className="inline-flex items-center justify-center gap-3" aria-label="Conheça o NVA">
+                <span>Conheça o</span>
+                <NvaLogo className="h-6 w-auto inline-block drop-shadow-sm" fill="#D91E2D" />
+              </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-bold text-lg px-8 bg-transparent border-white/30 text-white hover:bg-white/10">
               <Link to="/areas-de-atuacao">Áreas de atuação</Link>
@@ -60,7 +61,7 @@ export const Home: React.FC = () => {
                 </span>
               ))}
             </div>
-            <Button asChild variant="outline" className="border-novaag-gold text-novaag-gold hover:bg-novaag-gold hover:text-novaag-black">
+            <Button asChild variant="outline" className="border-[#05a44d] text-[#05a44d] hover:bg-[#05a44d] hover:text-white">
               <Link to="/quem-somos">Conheça nossa história</Link>
             </Button>
           </div>
@@ -107,7 +108,7 @@ export const Home: React.FC = () => {
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
               className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-novaag-green/20"
             >
-              <img src={ASSETS.images.map} alt="Comex" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" />
+              <img src={ASSETS.images.worldMap} alt="Comex - Expansão Global" className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-screen group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-novaag-black via-novaag-black/50 to-transparent" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
                 <h3 className="text-3xl font-title font-bold text-white mb-4">Comex</h3>

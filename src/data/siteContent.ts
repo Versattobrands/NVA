@@ -1,7 +1,7 @@
 export const SITE_CONTENT = {
   home: {
     hero: {
-      headline: "Inovação e honra no campo.",
+      headline: "Inovação e honra no campo",
       subheadline: "A NVA atua no desenvolvimento e na industrialização de soluções biotecnológicas e químicas para o agronegócio, unindo técnica, conhecimento e experiência.",
       supportText: "Uma indústria brasileira preparada para transformar desafios reais em soluções técnicas, sustentáveis e aplicáveis.",
       stamp: "Orgulho de ser 100% indústria brasileira."

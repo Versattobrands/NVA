@@ -1,38 +1,40 @@
 import React from "react";
-import { type Product } from "../../data/products";
-
-interface StimulusFeatureProps {
-  name: string;
-  icon?: string;
-}
-
-const StimulusFeature: React.FC<StimulusFeatureProps> = ({ name, icon }) => {
-  return (
-    <div className="flex items-center justify-start">
-      {icon ? (
-        <img src={icon} alt={name} className="h-16 md:h-20 w-auto object-contain drop-shadow-md" />
-      ) : (
-        <div className="w-16 h-16 rounded-full bg-white/20 border-2 border-white" />
-      )}
-    </div>
-  );
-};
+import type { Product } from "../../data/products";
+import { ProductBenefits } from "./ProductBenefits";
 
 interface StimulusSectionProps {
   products: Product[];
 }
+
+export const StimulusFeature: React.FC<{ name: string; icon?: string }> = ({ name, icon }) => {
+  return (
+    <div className="flex flex-col items-center justify-center text-center group">
+      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-105">
+        {icon ? (
+          <img src={icon} alt={name} className="w-full h-full object-contain" />
+        ) : (
+          <div className="w-full h-full rounded-full border-2 border-dashed border-white/20 flex items-center justify-center text-xs text-white/40">
+            N/A
+          </div>
+        )}
+      </div>
+      <span className="text-[10px] md:text-xs font-bold text-white max-w-[100px] leading-tight uppercase tracking-wider">
+        {name}
+      </span>
+    </div>
+  );
+};
 
 export const StimulusSection: React.FC<StimulusSectionProps> = ({ products }) => {
   const stimatrixGold = products.find(p => p.slug === "stimatrix-gold");
   const otherProducts = products.filter(p => p.slug !== "stimatrix-gold");
 
   return (
-    <div className="w-full flex flex-col gap-12">
-      
+    <div className="flex flex-col gap-12 w-full">
       {/* STIMATRIX GOLD HERO */}
       {stimatrixGold && (
-        <div className="relative w-full rounded-[2rem] overflow-hidden text-white shadow-2xl flex flex-col pb-6 md:pb-12">
-          {/* Fundo de imagem cobrindo todo o bloco */}
+        <div className="relative w-full rounded-[2rem] overflow-hidden text-white shadow-2xl border-b-8 border-novaag-red flex flex-col pb-6 md:pb-12">
+          {/* Background image & gradient overlay */}
           <div 
             className="absolute inset-0 z-0"
             style={{
@@ -41,12 +43,13 @@ export const StimulusSection: React.FC<StimulusSectionProps> = ({ products }) =>
               backgroundPosition: 'center',
             }}
           />
+          <div className="absolute inset-0 bg-black/60 z-0" />
           
-          <div className="relative z-10 w-full p-8 md:p-12 lg:p-16 flex flex-col">
+          <div className="relative z-10 w-full p-8 md:p-12 flex flex-col justify-center">
             {/* Logo */}
             {stimatrixGold.logo && (
-              <div className="w-full border-b border-novaag-red pb-8 mb-8">
-                 <img
+              <div className="mb-10 text-center md:text-left">
+                <img
                   src={stimatrixGold.logo}
                   alt={stimatrixGold.name}
                   className="w-full max-w-4xl object-contain drop-shadow-lg mx-auto md:mx-0"
@@ -70,11 +73,18 @@ export const StimulusSection: React.FC<StimulusSectionProps> = ({ products }) =>
             )}
 
             {/* Features (Icons) */}
-            <div className="flex flex-row flex-wrap justify-center md:justify-start gap-x-8 gap-y-12">
+            <div className="flex flex-row flex-wrap justify-center md:justify-start gap-x-8 gap-y-12 mb-10">
               {stimatrixGold.features.map((feat, idx) => (
                 <StimulusFeature key={idx} name={feat.name} icon={feat.icon} />
               ))}
             </div>
+
+            {/* Benefícios */}
+            {stimatrixGold.benefits && (
+              <div className="max-w-3xl">
+                <ProductBenefits benefits={stimatrixGold.benefits} />
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -97,12 +107,12 @@ export const StimulusSection: React.FC<StimulusSectionProps> = ({ products }) =>
                 )}
               </div>
               
-              {/* Content Column (Text + Features) */}
+              {/* Content Column (Text + Features + Benefits) */}
               <div className="w-full lg:w-2/3 flex flex-col justify-between">
                 
                 {/* Description Text */}
                 {product.description && (
-                  <div className="mb-12">
+                  <div className="mb-8">
                     <p className="text-white text-sm md:text-base leading-relaxed font-medium whitespace-pre-line">
                       {product.description}
                     </p>
@@ -110,11 +120,16 @@ export const StimulusSection: React.FC<StimulusSectionProps> = ({ products }) =>
                 )}
                 
                 {/* Features (Icons) */}
-                <div className="flex flex-row flex-wrap gap-x-8 gap-y-8">
+                <div className="flex flex-row flex-wrap gap-x-8 gap-y-8 mb-8">
                   {product.features.map((feat, idx) => (
                     <StimulusFeature key={idx} name={feat.name} icon={feat.icon} />
                   ))}
                 </div>
+
+                {/* Benefícios */}
+                {product.benefits && (
+                  <ProductBenefits benefits={product.benefits} />
+                )}
                 
               </div>
             </div>

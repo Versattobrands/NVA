@@ -10,19 +10,19 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "primary", size = "md", asChild, children, ...props }, ref) => {
     const baseStyles =
-      "inline-flex items-center justify-center rounded-md font-bold tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-novaag-gold disabled:pointer-events-none disabled:opacity-50";
+      "inline-flex items-center justify-center gap-2 rounded-md font-bold tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#05a44d] disabled:pointer-events-none disabled:opacity-50";
 
     const variants = {
       // Verde escuro — ação principal verde
-      primary: "bg-[#2C3F34] text-white hover:bg-[#F5A823] hover:text-[#0A0A0A] shadow-sm",
+      primary: "bg-[#2C3F34] text-white hover:bg-[#05a44d] hover:text-white shadow-sm",
       // Vermelho — ação de destaque / CTA principal
-      danger: "bg-[#D91E2D] text-white hover:bg-[#F5A823] hover:text-[#0A0A0A] shadow-sm",
-      // Dourado — botão de acento
-      accent: "bg-[#F5A823] text-[#0A0A0A] hover:bg-[#e0981a] shadow-sm",
+      danger: "bg-[#D91E2D] text-white hover:bg-[#05a44d] hover:text-white shadow-sm",
+      // Verde limão — botão de acento / CTA
+      accent: "bg-[#05a44d] text-white hover:bg-[#04883f] shadow-sm",
       // Outline
-      outline: "border-2 border-current text-current hover:bg-[#F5A823] hover:text-[#0A0A0A] hover:border-[#F5A823]",
+      outline: "border-2 border-current text-current hover:bg-[#05a44d] hover:text-white hover:border-[#05a44d]",
       // Ghost
-      ghost: "text-[#2C3F34] hover:bg-[#F5A823] hover:text-[#0A0A0A]",
+      ghost: "text-[#2C3F34] hover:bg-[#05a44d] hover:text-white",
     };
 
     const sizes = {
@@ -33,8 +33,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     // Support asChild pattern — wrap children in a span with all styles
     if (asChild && React.isValidElement(children)) {
-      return React.cloneElement(children as React.ReactElement<{ className?: string }>, {
-        className: cn(baseStyles, variants[variant], sizes[size], className),
+      const child = children as React.ReactElement<{ className?: string }>;
+      return React.cloneElement(child, {
+        className: cn(baseStyles, variants[variant], sizes[size], className, child.props.className),
       });
     }
 

@@ -201,6 +201,7 @@ export const ASSETS = {
     troppoilSquare: "/images/quadro-troppoil.jpg",
     productsHero: "/images/products_hero.png",
     map: "/images/mapa-brasil.png",
+    worldMap: "/images/mapa-mundo.jpg",
     coffee: "/img-coffee.jpg",
     field1: "/img-field-1.jpg",
     field2: "/img-field-2.jpg",
